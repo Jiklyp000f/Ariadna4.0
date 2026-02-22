@@ -1,0 +1,8 @@
+.mainLayout {
+    border: 1px solid purple;
+    max-width: 1230px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 50px;
+}
