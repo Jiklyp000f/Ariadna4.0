@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Vollkorn';
+    src: local('Vollkorn'),
+        url('../assets/fonts/Vollkorn-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: local('Vollkorn Italic'),
+        url('../assets/fonts/Vollkorn-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
