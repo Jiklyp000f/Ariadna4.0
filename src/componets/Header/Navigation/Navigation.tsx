@@ -1,14 +1,18 @@
 import style from "./Navigation.module.css"
+import { NavigationItem } from "./NavigationItem/NavigationItem"
+
+const menuItems = [
+    { id: 1, text: "Привет" },
+    { id: 2, text: "Мир!" },
+    { id: 3, text: "Мы" },
+    { id: 4, text: "Тестируем" },
+    { id: 5, text: "Сайт" }
+]
 
 export const Navigation = () => {
     return <nav>
         <ul className={style.list}>
-            <li><span>link1</span></li>
-            <li><span>link2</span></li>
-            <li><span>link3</span></li>
-            <li><span>link4</span></li>
-            <li><span>link5</span></li>
+            {menuItems.map(({ text, id }) => <NavigationItem key={id}>{text}</NavigationItem>)}
         </ul>
-
     </nav>
 }
