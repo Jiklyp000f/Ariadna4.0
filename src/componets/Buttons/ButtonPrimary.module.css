@@ -5,6 +5,7 @@
     font-size: 18px;
     font-weight: 600;
     box-sizing: border-box;
+    transition: all 0.3s;
 }
 
 .buttonPrimary {
@@ -12,10 +13,20 @@
     color: white;
 }
 
+.buttonPrimary:hover {
+    background-color: rgb(59, 184, 134);
+    color: white;
+}
+
 .buttonSecondary {
     outline: 3px solid rgb(255, 197, 66);
     outline-offset: -3px;
     color: rgb(255, 197, 66);
+}
+
+.buttonSecondary:hover {
+    outline: 3px solid rgb(250, 172, 47);
+    color: rgb(250, 172, 47);
 }
 
 .sizeMd {

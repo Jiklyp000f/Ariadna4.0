@@ -1,9 +1,14 @@
 .header {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 0 10px #eee;
+    left: 0;
+    right: 0;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    border: 1px solid red;
+    padding: 0.5rem 3rem;
     gap: 1rem;
     flex-wrap: wrap;
 }
@@ -14,7 +19,6 @@
     align-items: center;
 }
 
-/* Планшеты (768px - 1024px) */
 @media (max-width: 1024px) {
     .header {
         padding: 1rem 1.5rem;
@@ -51,44 +55,6 @@
         flex-direction: column;
         width: 100%;
         gap: 8px;
-    }
-
-    .buttonGroup button {
-        width: 100%;
-    }
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid red;
-    gap: clamp(0.5rem, 2vw, 1rem);
-    flex-wrap: wrap;
-}
-
-.buttonGroup {
-    display: flex;
-    gap: clamp(8px, 2vw, 10px);
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .buttonGroup {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .buttonGroup {
-        flex-direction: column;
-        width: 100%;
     }
 
     .buttonGroup button {
