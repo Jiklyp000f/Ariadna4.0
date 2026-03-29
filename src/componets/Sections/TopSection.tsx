@@ -8,8 +8,8 @@ export const TopSection = () => {
         <Title variant={"1"}>Lorem ipsum dolor sit amet consectetur</Title>
         <p>Что то написано мелким шрифтом, чтобы что-то...</p>
         <div className={style.buttonSection}>
-            <Button variant="primary" onClick={() => console.log("Primary")} >Нажми меня</Button>
-            <ButtonSecondary onClick={() => console.log("Primary")}>Нажми ещё вот тут</ButtonSecondary>
+            <Button size="xl" variant="primary" onClick={() => console.log("Primary")} >Нажми меня</Button>
+            <ButtonSecondary size="xl" onClick={() => console.log("Primary")}>Нажми ещё вот тут</ButtonSecondary>
         </div>
     </div>
 }
