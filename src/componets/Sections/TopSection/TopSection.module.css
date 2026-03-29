@@ -1,0 +1,36 @@
+.topSectionContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    padding: 0 3em;
+}
+
+.leftBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+}
+
+.buttonSection {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.rightBlock {
+    width: 30%;
+}
+
+@media (max-width: 768px) {
+
+    .buttonSection {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .rightBlock {
+        display: none;
+    }
+}

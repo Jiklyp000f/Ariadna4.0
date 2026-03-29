@@ -12,6 +12,8 @@ export const Title = ({ variant, children, ...props }: Props) => {
             return <h2 className={style.h2} {...props}>{children}</h2>
         case "3":
             return <h3 className={style.h3} {...props}>{children}</h3>
+        case "4":
+            return <h4 className={style.h4} {...props}>{children}</h4>
         default:
             const exhaustiveCheck: never = variant;
             console.log(exhaustiveCheck);
