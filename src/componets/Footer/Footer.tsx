@@ -30,13 +30,13 @@ export const Footer = () => {
         <div className={style.help}>
             <Title variant={"4"}>Помощь</Title>
             <div className={style.helpLinks}>
-                <a href="">Скидки
+                <a href="/404">Скидки
                 </a>
-                <a href="">Форматы квестов
+                <a href="/404">Форматы квестов
                 </a>
-                <a href="">Правила пользования
+                <a href="/404">Правила пользования
                 </a>
-                <a href="">Термины</a>
+                <a href="/404">Термины</a>
             </div>
         </div>
         <div className={style.banner}>

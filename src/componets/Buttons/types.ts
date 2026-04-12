@@ -5,5 +5,5 @@ export type ButtonOptions = {
     disabled?: boolean;
     variant?: ButtonVariant;
     size?: ButtonSize;
-    onClick: () => void;
+    onClick?: () => void;
 };

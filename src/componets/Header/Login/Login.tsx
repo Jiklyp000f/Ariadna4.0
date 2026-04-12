@@ -1,13 +1,14 @@
-import { Button, ButtonSecondary } from "../../Buttons/Button"
+import { ButtonSecondary } from "../../Buttons/Button"
 import style from "./Login.module.css"
 
-export const Login = () => {
+interface LoginProps {
+    onClick?: () => void;  // объявляем, что компонент может принимать onClick
+}
+
+export const Login = ({ onClick }: LoginProps) => {
     return <div className={style.buttonGroup}>
-        <Button onClick={() => console.log("Primary")} size="xl">
-            Primary
-        </Button>
-        <ButtonSecondary onClick={() => console.log("Secondary")} size="xl">
-            Secondary
+        <ButtonSecondary onClick={onClick} size="xl">
+            Авторизация
         </ButtonSecondary>
     </div>
 }

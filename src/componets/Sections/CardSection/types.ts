@@ -4,6 +4,7 @@ export type Event = {
     title: string,
     time: string | null,
     price: number | null,
-    disabled: boolean
+    disabled: boolean,
+    href: string
 }
 

@@ -2,9 +2,7 @@ import classNames from "classnames";
 import style from "./ButtonPrimary.module.css";
 import type { ButtonOptions } from "./types";
 
-//TODO СДЕЛАЙ ХОВЕР НА КНОПКИ!!!
 type Props = { children: React.ReactNode } & ButtonOptions;
-
 
 export const Button: React.FC<Props> = ({ children, disabled, variant = "primary", size = "md", onClick }) => {
     return <button disabled={disabled} onClick={onClick} className={classNames(

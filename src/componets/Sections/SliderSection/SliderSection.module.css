@@ -6,6 +6,13 @@
     overflow: visible;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
 .slide {
     border-radius: 12px;
     overflow: hidden;
