@@ -18,6 +18,14 @@
     justify-content: center;
 }
 
+.button {
+    margin-top: auto;
+}
+
+.button>button {
+    width: 100%;
+}
+
 img {
     border-radius: 10px;
 }

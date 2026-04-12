@@ -1,9 +1,14 @@
-.swiper-button-next,
-.swiper-button-prev {
-  width: 30px !important;
-  height: 30px !important;
-  padding: 5px !important;
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+
   svg.swiper-navigation-icon {
-    color: #fff;
+    color: rgb(61, 213, 152);
   }
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: rgb(61, 213, 152);
 }

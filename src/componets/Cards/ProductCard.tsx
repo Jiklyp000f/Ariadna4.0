@@ -1,16 +1,19 @@
 import { Button } from "../Buttons/Button"
+import type { Event } from "../Sections/CardSection/types"
 import { Title } from "../Titles/Title"
 import style from "./ProductCard.module.css"
-export const ProductCard = () => {
-    return <div className={style.productCard}>
-        <img src="https://img.freepik.com/premium-photo/portrait-cute-kitten_1048944-30263764.jpg?semt=ais_hybrid" alt="img" />
+
+
+export const ProductCard = ({ img, price, time, title, disabled }: Event) => {
+    return <div className={style.productCard} style={{ opacity: disabled ? 0.75 : 1 }}>
+        <img src={img} alt="img" />
         <div className={style.titleContainer}>
-            <Title variant="4">Шаблон</Title>
+            <Title variant="4">{title}</Title>
         </div>
-        <p>ghbdtn</p>
-        <p>fbddf</p>
-        <p>dsfsf</p>
-        <p>2222$</p>
-        <Button onClick={() => console.log("нажал")}>КУПИ МЕНЯ!</Button>
+        {time ? <p>{time} минут</p> : null}
+        {price ? <p>{price}  ₽</p> : null}
+        <div className={style.button}>
+            <Button disabled={disabled} onClick={() => console.log("нажал")}>{disabled ? "В разработке" : "Сыграть"}</Button>
+        </div>
     </div>
 }

@@ -6,8 +6,8 @@ import type { ButtonOptions } from "./types";
 type Props = { children: React.ReactNode } & ButtonOptions;
 
 
-export const Button: React.FC<Props> = ({ children, variant = "primary", size = "md", onClick }) => {
-    return <button onClick={onClick} className={classNames(
+export const Button: React.FC<Props> = ({ children, disabled, variant = "primary", size = "md", onClick }) => {
+    return <button disabled={disabled} onClick={onClick} className={classNames(
         style.button,
         {
             [style.buttonPrimary]: variant === "primary",
