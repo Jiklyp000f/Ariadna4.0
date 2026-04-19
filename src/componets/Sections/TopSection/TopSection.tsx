@@ -1,6 +1,6 @@
 import { Title } from "../../Titles/Title";
 import style from "./TopSection.module.css";
-import img from "../../../assets/image/travel_man.png";
+import img from "@/assets/image/travel_man.png";
 import { useScreenSize } from "../../../hooks/useScreenSize";
 
 export const TopSection = () => {
