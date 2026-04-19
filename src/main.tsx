@@ -1,8 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./main.scss";
 import "./styles/fonts.css";
 import "antd/dist/reset.css";
+import "./main.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { routes } from "./app/routes";
 

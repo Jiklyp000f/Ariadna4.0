@@ -15,7 +15,7 @@ export const MainPage = () => {
         <Header />
         <ContentLayout>
           {/* <TopSection /> */}
-          <Section />
+          <Section title="Оферта" component={<OfferSection />} />
           <OfferSection />
           <CardSection />
           <SuitsSection />
