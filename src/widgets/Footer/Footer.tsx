@@ -1,8 +1,8 @@
 import style from "./styles.module.scss";
 import vkIcon from "@/assets/image/icons/vk.png";
 import tgIcon from "@/assets/image/icons/telegram.png";
-import { Title } from "@/components/Titles/Title";
 import { Logo } from "@/components/Logo";
+import { Title } from "@/shared/ui/Titles";
 
 export const Footer = () => {
   return (

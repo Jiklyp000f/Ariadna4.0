@@ -6,6 +6,7 @@ import { SuitsSection } from "@/components/Sections/SuitsSection/SuitsSection";
 import { Footer } from "@/widgets/Footer";
 
 import { Header } from "@/widgets/Header/Header";
+import { Section } from "@/widgets/Section";
 
 export const MainPage = () => {
   return (
@@ -14,6 +15,7 @@ export const MainPage = () => {
         <Header />
         <ContentLayout>
           {/* <TopSection /> */}
+          <Section />
           <OfferSection />
           <CardSection />
           <SuitsSection />

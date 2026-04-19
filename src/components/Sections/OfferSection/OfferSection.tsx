@@ -1,9 +1,9 @@
-import { Title } from "../../Titles/Title";
 import style from "./OfferSection.module.css";
 import img1 from "@/assets/offerImg/image1.png";
 import img2 from "@/assets/offerImg/image2.png";
 import img3 from "@/assets/offerImg/image3.png";
 import img4 from "@/assets/offerImg/image4.png";
+import { Title } from "@/shared/ui/Titles";
 
 export const OfferSection = () => {
   return (

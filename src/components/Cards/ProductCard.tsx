@@ -1,6 +1,6 @@
+import { Title } from "@/shared/ui/Titles";
 import { Button } from "../Buttons/Button";
 import type { Event } from "../Sections/CardSection/types";
-import { Title } from "../Titles/Title";
 import style from "./ProductCard.module.css";
 import timeIcon from "@/assets/image/icons/time_icon.png";
 import { useNavigate } from "react-router-dom";

@@ -1,10 +1,10 @@
-import { Title } from "../../Titles/Title";
 import style from "./SuitsSection.module.css";
 import img1 from "@/assets/image/suitsImg/image1.png";
 import img2 from "@/assets/image/suitsImg/image2.png";
 import img3 from "@/assets/image/suitsImg/image3.png";
 import img4 from "@/assets/image/suitsImg/image4.png";
 import img5 from "@/assets/image/suitsImg/image5.png";
+import { Title } from "@/shared/ui/Titles";
 
 export const SuitsSection = () => {
   return (

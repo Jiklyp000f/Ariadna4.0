@@ -1,11 +1,11 @@
-import { Title } from "../../Titles/Title";
+import { Title } from "@/shared/ui/Titles";
 import style from "./Input.module.css";
 
 type Props = {
   type: InputType;
   label?: string;
   value: string;
-  onChange: (event: any) => void;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 type InputType = "text" | "password" | "checkbox" | "email";

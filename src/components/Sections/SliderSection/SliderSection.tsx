@@ -13,7 +13,7 @@ import img6 from "@/assets/image/swiperImg/image6.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Title } from "../../Titles/Title";
+import { Title } from "@/shared/ui/Titles";
 
 interface SlideItem {
   id: number;

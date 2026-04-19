@@ -1,7 +1,7 @@
 import style from "./BatyshkaSection.module.css";
 import batyshka from "@/assets/image/batyshka.png";
-import { Title } from "../../Titles/Title";
 import { Description } from "../../Description/Description";
+import { Title } from "@/shared/ui/Titles";
 
 export const BatyshkaSection = () => {
   return (

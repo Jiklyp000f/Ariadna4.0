@@ -1,4 +1,4 @@
-import { Title } from "../../Titles/Title";
+import { Title } from "@/shared/ui/Titles";
 import style from "./QRSection.module.css";
 import QRImage from "@/assets/image/QR.png";
 
