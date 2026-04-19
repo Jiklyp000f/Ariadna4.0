@@ -1,13 +1,10 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './main.css'
-import './reset.css'
-import './styles/fonts.css';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import { routes } from './routes/Routes/Routes.tsx';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./main.scss";
+import "./styles/fonts.css";
+import "antd/dist/reset.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { routes } from "./app/routes";
 
 //TODO: модалка, поменять телегу на макс, шрифты, аннотация(небольшое описание карточек товара),
 //  поменять лого, навигация увеличить шрифт, уменьшить шрифт перед футером,
@@ -18,8 +15,8 @@ import { routes } from './routes/Routes/Routes.tsx';
 
 const router = createBrowserRouter(routes);
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
   </StrictMode>,
-)
+);

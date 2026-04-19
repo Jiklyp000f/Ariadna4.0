@@ -1,0 +1,193 @@
+@mixin disabled {
+  &:disabled {
+    color: $gray-3;
+    cursor: default;
+    background-color: transparent;
+  }
+}
+
+@mixin baseButton {
+  color: $white;
+  font-weight: 500;
+  text-shadow: -1px -1px 0 $primary-darken-1;
+  outline-offset: 0 !important;
+  user-select: none;
+  padding: $step-3;
+  max-height: 40px;
+  min-height: 40px;
+  font-size: $font-size-lg;
+  line-height: 19px;
+  width: fit-content;
+  @include transition();
+}
+
+@mixin noWave {
+  &:global(.ant-btn) {
+    [class*="wave"] {
+      display: none;
+    }
+  }
+}
+
+@mixin baseFocus($color: $primary) {
+  color: $dark-1;
+  outline: $step-1 solid color.scale($color, $lightness: 70%);
+}
+
+@mixin baseActive($bg, $text, $border) {
+  background-color: $bg !important;
+  color: $text !important;
+  border-color: $border !important;
+}
+
+.buttonPrimary {
+  @include noWave();
+
+  &:global(.ant-btn-color-primary) {
+    background: $primary;
+    @include baseButton();
+    transition:
+      background-color 0.3s ease,
+      color 0.1s ease;
+
+    &:not(:disabled) {
+      &:active,
+      &:hover {
+        color: $white;
+        background-color: $primary-darken-1;
+      }
+
+      &:focus-visible {
+        background: $primary;
+        @include baseFocus();
+      }
+
+      &:global(.ant-btn-loading) {
+        &:hover {
+          cursor: default;
+          background: $primary !important;
+          color: $dark-1 !important;
+        }
+      }
+    }
+  }
+
+  @include disabled();
+}
+
+.buttonSecondary {
+  @include noWave();
+
+  &:global(.ant-btn-color-default) {
+    background-color: $white;
+    @include baseButton();
+
+    &:not(:disabled) {
+      &:active {
+        @include baseActive($dark-1, $base-color, $dark-1);
+      }
+
+      &:hover {
+        background-color: $gray-3;
+        border-color: $gray-3;
+      }
+
+      &:focus-visible {
+        border-color: transparent;
+        @include baseFocus($gray-3);
+      }
+
+      &:global(.ant-btn-loading) {
+        &:hover,
+        &:active {
+          cursor: default;
+          @include baseActive(transparent, $dark-1, $gray-3);
+        }
+      }
+    }
+  }
+
+  @include disabled();
+}
+
+.buttonText {
+  @include noWave();
+
+  &:global(.ant-btn-color-default) {
+    background-color: transparent;
+    @include baseButton();
+
+    &:not(:disabled) {
+      &:active {
+        @include baseActive($dark-1, $base-color, $dark-1);
+      }
+
+      &:hover {
+        background-color: $gray-5;
+        border-color: $gray-5;
+      }
+
+      &:focus-visible {
+        border-color: transparent;
+        @include baseFocus($gray-5);
+      }
+
+      &:global(.ant-btn-loading) {
+        &:hover,
+        &:active {
+          cursor: default;
+          @include baseActive(transparent, $dark-1, $gray-3);
+          border-color: transparent !important;
+        }
+      }
+    }
+  }
+
+  @include disabled();
+}
+
+.buttonIcon {
+  @include noWave();
+
+  &:global(.ant-btn-color-default) {
+    background-color: $white;
+    @include baseButton();
+    max-height: max-content;
+    max-width: max-content;
+    min-width: 20px;
+    min-height: 20px;
+    font-size: 12px;
+    padding: 0 2px;
+    border-radius: 2px;
+
+    &:not(:disabled) {
+      &:active {
+        @include baseActive($dark-1, $base-color, $dark-1);
+      }
+
+      &:hover {
+        background-color: $gray-3;
+        border-color: $gray-3;
+      }
+
+      &:focus-visible {
+        border-color: transparent;
+        @include baseFocus($gray-3);
+      }
+
+      &:global(.ant-btn-loading) {
+        &:hover,
+        &:active {
+          cursor: default;
+          @include baseActive(transparent, $dark-1, $gray-3);
+        }
+      }
+    }
+  }
+
+  @include disabled();
+}
+
+.buttonWide {
+  width: 100% !important;
+}

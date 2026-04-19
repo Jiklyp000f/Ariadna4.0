@@ -1,0 +1,59 @@
+.productCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 10px #eee;
+    padding: 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+
+.productCard>img {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 290px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.productCard:hover {
+    box-shadow: 10px 10px 30px #aaa;
+    transform: scale(1.025);
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.timeContainer {
+    display: flex;
+    align-items: center;
+}
+
+.timeContainer>img {
+    width: 30px;
+}
+
+.priceContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.priceContainer>p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button {
+    margin-top: auto;
+}
+
+.button>button {
+    width: 100%;
+}

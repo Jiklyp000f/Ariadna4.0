@@ -1,0 +1,39 @@
+.button {
+    border-radius: 2rem;
+    padding: 5px 15px;
+    min-width: 100px;
+    font-size: 18px;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+.buttonPrimary {
+    background-color: rgb(61, 213, 152);
+    color: white;
+}
+
+.buttonPrimary:hover {
+    background-color: rgb(59, 184, 134);
+    color: white;
+}
+
+.buttonSecondary {
+    outline: 3px solid rgb(255, 197, 66);
+    outline-offset: -3px;
+    color: rgb(255, 197, 66);
+}
+
+.buttonSecondary:hover {
+    outline: 3px solid rgb(250, 172, 47);
+    color: rgb(250, 172, 47);
+}
+
+.sizeMd {
+    padding: 5px 15px;
+    font-size: 14px;
+}
+
+.sizeXl {
+    padding: 10px 30px;
+}

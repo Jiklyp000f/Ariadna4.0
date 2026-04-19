@@ -1,0 +1,144 @@
+.header {
+  position: fixed;
+  background-color: $gray-5;
+  box-shadow: 0 0 20px $gray-3;
+  border-bottom: 1px solid $gray-3;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 3rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 1rem 1.5rem;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+}
+
+/* Новые стили для бургер меню */
+.burgerIcon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.burgerIcon span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.burgerIcon:hover span {
+  background-color: rgb(61, 213, 152);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  animation: fadeIn 0.3s ease;
+}
+
+.burgerMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  animation: slideIn 0.3s ease;
+  overflow-y: auto;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+  color: rgb(61, 213, 152);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .burgerMenu {
+    width: 100%;
+    max-width: none;
+  }
+
+  .burgerIcon {
+    top: 15px;
+    right: 15px;
+  }
+}

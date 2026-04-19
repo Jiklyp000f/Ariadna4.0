@@ -1,0 +1,96 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: $gray-1;
+  color: white;
+}
+
+.footer > div {
+  padding: 20px;
+  flex-basis: 100%;
+}
+
+.contacts {
+  display: flex;
+  gap: 10px;
+}
+
+.contactsInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social {
+  display: flex;
+  gap: 5px;
+}
+
+.social > img {
+  width: 60px;
+}
+
+.help {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.helpLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.helpLinks > a {
+  color: white;
+}
+
+.helpLinks > a:hover {
+  color: rgb(216, 255, 234);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+
+  .footerLogo {
+    display: none;
+  }
+
+  .banner {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .banner > img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+  }
+
+  .footer > div {
+    padding: 10px 5px;
+  }
+
+  .banner {
+    display: flex;
+    justify-content: center;
+    position: static;
+  }
+}

@@ -1,0 +1,94 @@
+$base-color: #fff;
+$white: #fff;
+$blue: #0061d9;
+$dark-blue: #0050b2;
+$primary: #26ba7f;
+$primary-darken-1: #1ca56f;
+$coral: #ff2e56;
+$light-orange: #ffc700;
+
+$dark-1: #000000;
+$dark-2: #1e1e1e;
+$dark-3: #333333;
+
+$gray-1: #76767a;
+$gray-2: #a7a7ab;
+$gray-3: #d9d9de;
+$gray-4: #f0f0f0;
+$gray-5: #f5f5f5;
+
+$xxl: 1400px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$font-size-md: 14px;
+$font-size-lg: 16px;
+$font-size-xl: 18px;
+$font-size-xxl: 22px;
+$font-size-xxxl: 24px;
+
+$line-height-xs: 12px;
+$line-height-sm: 16px;
+$line-height-md: 19px;
+$line-height-lg: 20px;
+$line-height-xl: 24px;
+$line-height-xxl: 28px;
+$line-height-xxxl: 30px;
+
+$height: clamp(700px, 100vh, 100vh);
+
+$mouse-device: "(hover: hover) and (pointer: fine)";
+// @media #{$mouse-device} //отключение ховера для мобилок
+
+$index-1: 1; //Для наползающих элементов в общем потоке
+$index-2: 2; //Для наползающих элементов в общем потоке
+$index-3: 3; //Для масок
+$index-4: 4; //Для сайдбаров
+$index-5: 5; //Для модалок
+$index-6: 6; //Для элементов, перекрывающих все
+$index-7: 10000; //Перебитие всего
+
+$step: 4px;
+$step-1: $step;
+$step-2: $step * 2;
+$step-3: $step * 3;
+$step-4: $step * 4;
+$step-5: $step * 5;
+$step-6: $step * 6;
+$step-7: $step * 7;
+$step-8: $step * 8;
+$step-9: $step * 9;
+
+$radius-1: $step;
+$radius-2: $step * 2;
+$radius-3: $step * 3;
+
+@mixin space($direction, $size) {
+  @if ($direction == top) {
+    margin-top: $step * $size;
+  }
+
+  @if ($direction == bottom) {
+    margin-top: $step * $size;
+  }
+
+  @if ($direction == left) {
+    margin-top: $step * $size;
+  }
+
+  @if ($direction == right) {
+    margin-top: $step * $size;
+  }
+}
+@mixin transition {
+  transition: 0.3s ease all;
+}
+@mixin noWrapText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

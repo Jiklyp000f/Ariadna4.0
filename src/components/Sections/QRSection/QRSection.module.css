@@ -1,0 +1,39 @@
+.qrSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.qrBlock {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    padding-right: 25px;
+    border-radius: 10px;
+    background: rgb(61, 213, 152);
+}
+
+.qrBlock>img {
+    width: 200px;
+    mix-blend-mode: multiply;
+}
+
+.qrBlock>p {
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .qrBlock {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .qrBlock>p {
+        font-size: 16px;
+    }
+}
