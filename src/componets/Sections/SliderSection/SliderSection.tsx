@@ -62,7 +62,7 @@ const slidesData: SlideItem[] = [
 
 export const SliderSection = () => {
   return (<div className={style.wrapper}>
-    <Title variant="2">Не забудьте подготовиться</Title>
+    <Title variant="2">Ключевые объекты экскурсии</Title>
     <div className={style.sliderSection}>
       <Swiper
         modules={[Navigation, Pagination]}

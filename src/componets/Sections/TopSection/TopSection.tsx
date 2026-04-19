@@ -10,7 +10,7 @@ export const TopSection = () => {
     return <div className={style.topSectionContainer}>
         <div className={style.leftBlock}>
             <Title variant={isMobile ? "3" : "1"}>АРИАДНА 4.0</Title>
-            <p>- Это сервис, где вы открываете Йошкар-Олу с другой стороны. Погрузитесь в захватывающий мир интерактивных иммерсивных экскурсий!</p>
+            <p>- это сервис, где вы открываете Йошкар-Олу с другой стороны. Погрузитесь в захватывающий мир интерактивных иммерсивных экскурсий!</p>
         </div>
         <div className={style.rightBlock}>
             <img src={img} alt="картинка" />

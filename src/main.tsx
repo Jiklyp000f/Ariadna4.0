@@ -7,24 +7,16 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { NotFoundPage } from './componets/Pages/NotFoundPage/NotFoundPage.tsx';
-import { BatyshkaPage } from './componets/Pages/BatyshkaPage/BatyshkaPage.tsx';
-import { MainPage } from './componets/Pages/MainPage/MainPage.tsx';
+import { routes } from './routes/Routes/Routes.tsx';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <MainPage />
-  },
-  {
-    path: "/batyshka",
-    element: <BatyshkaPage />,
-  },
-  {
-    path: "/404",
-    element: <NotFoundPage />,
-  },
-]);
+//TODO: модалка, поменять телегу на макс, шрифты, аннотация(небольшое описание карточек товара),
+//  поменять лого, навигация увеличить шрифт, уменьшить шрифт перед футером,
+//  блок дескриптион увеличить текст, убрать играть через
+//сценарий пользователя: гость(предложение войти/зарегистрироваться),
+//  режим пользователя(функ корзины, исотрии заказов(интернет магазин))
+//футер: уменьшить картинки все!
+
+const router = createBrowserRouter(routes);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

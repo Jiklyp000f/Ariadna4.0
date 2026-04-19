@@ -8,7 +8,7 @@ interface LoginProps {
 export const Login = ({ onClick }: LoginProps) => {
     return <div className={style.buttonGroup}>
         <ButtonSecondary onClick={onClick} size="xl">
-            Авторизация
+            Войти/Регистрация
         </ButtonSecondary>
     </div>
 }

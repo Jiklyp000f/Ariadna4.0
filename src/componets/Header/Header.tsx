@@ -35,7 +35,7 @@ export const Header = () => {
                                                 setOpen(false);
                                           }} />
                                           <Login onClick={() => {
-                                                navigate("/404");
+                                                navigate("/auth");
                                                 setOpen(false);
                                           }} />
                                     </div>
@@ -52,7 +52,7 @@ export const Header = () => {
                         navigate("/404")
                   }} />
                   <Login onClick={() => {
-                        navigate("/404");
+                        navigate("/auth");
                   }} />
             </div>
       );
