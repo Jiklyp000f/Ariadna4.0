@@ -1,4 +1,4 @@
-import style from "./BatyshkaSection.module.css";
+import style from "./styles.module.scss";
 import batyshka from "@/assets/image/batyshka.png";
 import { Description } from "../../Description/Description";
 import { Title } from "@/shared/ui/Titles";

@@ -13,8 +13,8 @@ export const Section: React.FC<Props> = ({ title, component }) => {
     <div className={styles.wrapper}>
       <div className={styles.title}>
         {title && <Title variant="2">{title}</Title>}
-        {component}
       </div>
+      <div>{component}</div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import style from "./TopSection.module.css";
+import style from "./styles.module.scss";
 import img from "@/assets/image/travel_man.png";
 import { useScreenSize } from "../../../hooks/useScreenSize";
 import { Title } from "@/shared/ui/Titles";

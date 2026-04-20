@@ -1,4 +1,4 @@
-import style from "./ReadySection.module.css";
+import style from "./styles.module.scss";
 import telephone from "@/assets/image/telephone.png";
 import weather from "@/assets/image/weather.png";
 import { Title } from "@/shared/ui/Titles";
