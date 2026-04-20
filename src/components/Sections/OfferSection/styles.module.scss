@@ -24,9 +24,8 @@
 }
 
 .titleContainer {
-  border: 2px solid $primary;
-  border-radius: 20px;
-  background-color: $primary;
+  border: $step-1 solid $primary;
+  border-radius: $step-2;
   padding: 20px 15px;
   display: flex;
   align-items: center;
@@ -39,7 +38,14 @@
 .titleContainer .title {
   margin: 0;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.2;
+}
+
+.holderContainer:hover {
+  & > img {
+    transition: all 0.3s ease;
+    transform: translate(0, -10px);
+  }
 }
 
 @media (max-width: 1024px) {

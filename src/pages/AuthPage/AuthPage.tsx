@@ -35,6 +35,7 @@ export const AuthPage = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
               <AppButtonPrimary
+                wide
                 onClick={() => console.log("победа", login, password)}
               >
                 Войти

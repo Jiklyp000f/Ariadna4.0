@@ -9,25 +9,25 @@ import { Title } from "@/shared/ui/Titles";
 export const SuitsSection = () => {
   return (
     <div className={style.mainContainer}>
-      <div className={style.suitsContainer}>
+      <div className={style.item}>
         <img src={img1} alt="Турист" />
-        <Title variant="3">Турист</Title>
+        <Title variant="4">Турист</Title>
       </div>
-      <div className={style.suitsContainer}>
+      <div className={style.item}>
         <img src={img2} alt="Местным жителям" />
-        <Title variant="3">Местным жителям</Title>
+        <Title variant="4">Местным жителям</Title>
       </div>
-      <div className={style.suitsContainer}>
+      <div className={style.item}>
         <img src={img3} alt="Семьям с детьми" />
-        <Title variant="3">Семьям с детьми</Title>
+        <Title variant="4">Семьям с детьми</Title>
       </div>
-      <div className={style.suitsContainer}>
+      <div className={style.item}>
         <img src={img4} alt="Авторам" />
-        <Title variant="3">Авторам</Title>
+        <Title variant="4">Авторам</Title>
       </div>
-      <div className={style.suitsContainer}>
+      <div className={style.item}>
         <img src={img5} alt="Парам" />
-        <Title variant="3">Парам</Title>
+        <Title variant="4">Парам</Title>
       </div>
     </div>
   );

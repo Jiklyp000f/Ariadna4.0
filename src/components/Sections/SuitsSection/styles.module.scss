@@ -1,15 +1,27 @@
 .mainContainer {
   display: flex;
+  flex-wrap: wrap;
+  gap: $step-5;
+  justify-content: space-around;
 }
 
-.suitsContainer {
+.item {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  flex-shrink: 0;
+  opacity: 0.8;
+
+  &:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+    opacity: 1;
+  }
 
   img {
-    max-width: 100%;
+    height: 200px;
+    width: 200px;
   }
 }
 
