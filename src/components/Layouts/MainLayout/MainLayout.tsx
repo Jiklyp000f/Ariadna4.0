@@ -1,9 +1,18 @@
-import style from "./MainLayout.module.css";
+import { Header } from "@/widgets/Header/Header";
+import { Footer } from "@/widgets/Footer";
+import { Fragment } from "react/jsx-runtime";
+import { MainLayoutWrapper } from "./MainLayoutWrapper";
 
-type Props = { children: React.ReactNode }
+type Props = { children: React.ReactNode };
 
 export const MainLayout: React.FC<Props> = ({ children }) => {
-    return <div className={style.mainLayout}>
+  return (
+    <Fragment>
+      <MainLayoutWrapper>
+        <Header />
         {children}
-    </div>
-}
+      </MainLayoutWrapper>
+      <Footer />
+    </Fragment>
+  );
+};
