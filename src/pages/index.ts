@@ -1,4 +1,4 @@
-export * from "./MainPage";
-export * from "./BatyshkaPage/BatyshkaPage";
+export * from "./main/MainPage";
+export * from "./event-view/EventPage";
 export * from "./NotFoundPage/NotFoundPage";
-export * from "./AuthPage/AuthPage";
+export * from "./auth/AuthPage";

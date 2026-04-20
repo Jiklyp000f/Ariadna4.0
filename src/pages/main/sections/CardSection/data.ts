@@ -13,7 +13,7 @@ export const eventsArray: Event[] = [
     time: "75 - 90",
     price: 2000,
     disabled: false,
-    href: "/batyshka",
+    href: "/event",
   },
   {
     id: 2,

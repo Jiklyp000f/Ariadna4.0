@@ -1,13 +1,9 @@
 import { useState } from "react";
-import { Footer } from "../../widgets/Footer/Footer";
-
-import style from "./AuthPage.module.css";
-import { MainLayout } from "@/components/Layouts/MainLayout/MainLayout";
-import { Header } from "@/widgets/Header/Header";
-import { ContentLayout } from "@/components/Layouts/ContentLayout/ContentLayout";
+import style from "./styles.module.scss";
 import { Form } from "@/components/Forms/Forms/Form";
 import { Input } from "@/components/Forms/Inputs/Input";
 import { AppButtonPrimary } from "@/shared/ui/button";
+import { ContentLayout, MainLayout } from "@/app/layouts";
 
 //NOTE: сохраняй значения формы в локалстораж, мне эти значения нужны будут для управления роутами. роуты покажу позже. я понимаю что это не секьюрно это для демонтсрации
 
@@ -18,7 +14,6 @@ export const AuthPage = () => {
   return (
     <>
       <MainLayout>
-        <Header />
         <ContentLayout>
           <div className={style.wrapper}>
             <Form>
@@ -44,7 +39,6 @@ export const AuthPage = () => {
           </div>
         </ContentLayout>
       </MainLayout>
-      <Footer />
     </>
   );
 };

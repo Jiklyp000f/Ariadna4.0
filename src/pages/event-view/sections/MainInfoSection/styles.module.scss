@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  gap: $step-5;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: $step-7;
+}
+
+.picture {
+  border: 1px solid $gray-2;
+  border-radius: $step-1;
+  object-fit: cover;
+}
+
+.title {
+  margin-bottom: $step-3;
+}
+
+.subtitle {
+  color: $dark-3;
+  background-color: $gray-4;
+  padding: $step-2 $step-3;
+  line-height: 1.4;
+  font-size: $font-size-lg;
+  opacity: 0.75;
+}
+
+.description {
+  margin-top: $step-4;
+  font-size: $font-size-xl;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}

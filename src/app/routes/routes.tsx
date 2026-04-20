@@ -1,4 +1,4 @@
-import { AuthPage, BatyshkaPage, MainPage, NotFoundPage } from "@/pages";
+import { AuthPage, EventPage, MainPage, NotFoundPage } from "@/pages";
 
 export const routes = [
   {
@@ -6,8 +6,8 @@ export const routes = [
     element: <MainPage />,
   },
   {
-    path: "/batyshka",
-    element: <BatyshkaPage />,
+    path: "/event",
+    element: <EventPage />,
   },
   {
     path: "/404",

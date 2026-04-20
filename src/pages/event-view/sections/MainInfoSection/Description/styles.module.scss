@@ -1,0 +1,64 @@
+.description {
+  display: flex;
+  margin-top: auto;
+  background-color: $gray-5;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex-grow: 1;
+  border-right: 1px dashed $gray-2;
+  padding: $step-3 $step-4;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.label {
+  color: $gray-1;
+  font-weight: 500;
+  font-size: $font-size-sm;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  gap: $step-1;
+  align-items: center;
+  height: 100px;
+  justify-content: center;
+}
+
+.value {
+  color: $primary;
+  font-weight: 600;
+  font-size: 42px;
+}
+
+.units,
+.type {
+  color: $dark-3;
+  font-size: $font-size-md;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.typeWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $step-2;
+  align-items: center;
+
+  svg {
+    font-size: 42px;
+    fill: $primary;
+  }
+}

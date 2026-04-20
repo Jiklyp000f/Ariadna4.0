@@ -1,16 +1,18 @@
-import { ContentLayout, MainLayout } from "@/components/Layouts";
-import { CardSection } from "@/components/Sections/CardSection/CardSection";
-import { OfferSection } from "@/components/Sections/OfferSection/OfferSection";
-import { SuitsSection } from "@/components/Sections/SuitsSection/SuitsSection";
-import { TopSection } from "@/components/Sections/TopSection/TopSection";
+import { ContentLayout, MainLayout } from "@/app/layouts";
 import { Section } from "@/widgets/Section";
+import {
+  CardSection,
+  OfferSection,
+  SuitsSection,
+  TopSection,
+} from "./sections";
 
 export const MainPage = () => {
   return (
     <>
       <MainLayout>
         <ContentLayout>
-          <TopSection />
+          <Section component={<TopSection />} />
           <Section title="Что предлагаем" component={<OfferSection />} />
           <Section component={<CardSection />} />
           <Section title="Кому подойдёт" component={<SuitsSection />} />
