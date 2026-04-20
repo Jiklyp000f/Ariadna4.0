@@ -1,4 +1,4 @@
-import { ProductCard } from "../../Cards/ProductCard";
+import { ProductCard } from "../../Cards/ProductCard/ProductCard";
 import { eventsArray } from "./data";
 import type { Event } from "./types";
 
@@ -8,7 +8,7 @@ export const CardSection = () => {
   return (
     <div className={style.container}>
       {eventsArray.map((event: Event) => {
-        return <ProductCard {...event} />;
+        return <ProductCard key={event.id} {...event} />;
       })}
     </div>
   );

@@ -9,7 +9,6 @@
 @mixin baseButton {
   color: $white;
   font-weight: 500;
-  text-shadow: -1px -1px 0 $primary-darken-1;
   outline-offset: 0 !important;
   user-select: none;
   padding: $step-3;
