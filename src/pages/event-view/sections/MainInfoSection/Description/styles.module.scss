@@ -12,8 +12,8 @@
   flex-direction: column;
   flex-basis: 100%;
   flex-grow: 1;
-  border-right: 1px dashed $gray-2;
   padding: $step-3 $step-4;
+  border-right: 1px dashed $gray-2;
 
   &:last-child {
     border-right: none;
@@ -26,6 +26,7 @@
   font-size: $font-size-sm;
   letter-spacing: 1px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .time {
@@ -60,5 +61,43 @@
   svg {
     font-size: 42px;
     fill: $primary;
+  }
+}
+
+@media (max-width: 960px) {
+  .label {
+    font-size: $font-size-xs;
+  }
+
+  .value {
+    color: $primary;
+    font-weight: 600;
+    font-size: $font-size-xxxl;
+  }
+
+  .units,
+  .type {
+    font-size: $font-size-sm;
+  }
+
+  .typeWrapper {
+    svg {
+      font-size: $font-size-xxxl;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .description {
+    flex-direction: column;
+  }
+
+  .item {
+    flex-direction: row;
+    border-bottom: 1px dashed $gray-2;
+  }
+
+  .time {
+    width: 150px;
   }
 }
