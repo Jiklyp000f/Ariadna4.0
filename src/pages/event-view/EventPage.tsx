@@ -8,6 +8,7 @@ import {
   ReadySection,
   SliderSection,
 } from "./sections";
+import { AppDivider } from "@/shared/ui/divider";
 
 export const EventPage = () => {
   return (
@@ -15,12 +16,16 @@ export const EventPage = () => {
       <MainLayout>
         <ContentLayout>
           <Section component={<MainInfoSection />} />
+          <AppDivider />
           <SliderSection />
+          <AppDivider />
           <Section title="Маршрут Экскурсии" component={<MapSection />} />
+          <AppDivider />
           <Section
             title="Не забудьте подготовиться"
             component={<ReadySection />}
           />
+          <AppDivider />
           <Section title="Играем через" component={<QRSection />} />
         </ContentLayout>
       </MainLayout>

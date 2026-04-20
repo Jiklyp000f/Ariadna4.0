@@ -6,6 +6,7 @@ import {
   SuitsSection,
   TopSection,
 } from "./sections";
+import { AppDivider } from "@/shared/ui/divider";
 
 export const MainPage = () => {
   return (
@@ -13,8 +14,11 @@ export const MainPage = () => {
       <MainLayout>
         <ContentLayout>
           <Section component={<TopSection />} />
+          <AppDivider />
           <Section title="Что предлагаем" component={<OfferSection />} />
+          <AppDivider />
           <Section component={<CardSection />} />
+          <AppDivider />
           <Section title="Кому подойдёт" component={<SuitsSection />} />
         </ContentLayout>
       </MainLayout>

@@ -1,6 +1,6 @@
 .contentLayout {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: $step-6;
+  padding: 0 $step-5;
 }

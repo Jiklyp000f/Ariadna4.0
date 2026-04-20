@@ -9,9 +9,10 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: $step-6;
   align-items: center;
   text-align: center;
+  padding: $step-5;
 }
 
 .slide {
