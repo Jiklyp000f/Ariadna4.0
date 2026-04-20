@@ -1,11 +1,11 @@
 import style from "./styles.module.scss";
 
 import { useNavigate } from "react-router-dom";
-import { useScreenSize } from "../../hooks/useScreenSize";
 import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Login } from "@/components/Login";
 import { Logo } from "@/components/Logo";
+import { useScreenSize } from "@/shared/lib/useScreenSize";
 
 export const Header = () => {
   const navigate = useNavigate();
