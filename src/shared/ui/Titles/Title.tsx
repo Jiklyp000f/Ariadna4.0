@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import type { TitleOptions, Variant } from "./types";
-import style from "./Title.module.css";
+import style from "./styles.module.scss";
 
 type Props = { variant: Variant; children: ReactNode } & TitleOptions;
 

@@ -42,9 +42,12 @@
   text-shadow: 0 -1px $primary-darken-1;
 }
 
+.holderContainer > img {
+  transition: all 0.3s ease;
+}
+
 .holderContainer:hover {
   & > img {
-    transition: all 0.3s ease;
     transform: translate(0, -10px);
   }
 }
