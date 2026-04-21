@@ -1,4 +1,4 @@
-import { AuthPage, EventPage, MainPage, NotFoundPage } from "@/pages";
+import { AuthPage, EventPage, MainPage, Page404 } from "@/pages";
 
 export const routes = [
   {
@@ -11,7 +11,7 @@ export const routes = [
   },
   {
     path: "/404",
-    element: <NotFoundPage />,
+    element: <Page404 />,
   },
   {
     path: "/auth",

@@ -83,7 +83,7 @@
 
     &:not(:disabled) {
       &:active {
-        @include baseActive($dark-1, $base-color, $dark-1);
+        @include baseActive($dark-1, $white, $dark-1);
       }
 
       &:hover {
@@ -118,7 +118,7 @@
 
     &:not(:disabled) {
       &:active {
-        @include baseActive($dark-1, $base-color, $dark-1);
+        @include baseActive($dark-1, $white, $dark-1);
       }
 
       &:hover {
@@ -161,7 +161,7 @@
 
     &:not(:disabled) {
       &:active {
-        @include baseActive($dark-1, $base-color, $dark-1);
+        @include baseActive($dark-1, $white, $dark-1);
       }
 
       &:hover {
