@@ -6,15 +6,32 @@ import { Navigation } from "@/components/Navigation";
 import { Login } from "@/components/Login";
 import { Logo } from "@/components/Logo";
 import { useScreenSize } from "@/shared/lib/useScreenSize";
-import { Flex, Modal } from "antd";
+import { Checkbox, Form, Input, Modal } from "antd";
 import { Title } from "@/shared/ui/Titles";
-import { AppButtonPrimary, AppButtonSecondary } from "@/shared/ui/button";
+import { AppButtonPrimary } from "@/shared/ui/button";
+import type { FormProps } from "antd/lib";
+
+type FieldType = {
+  username?: string;
+  password?: string;
+  remember?: string;
+};
 
 export const Header = () => {
   const navigate = useNavigate();
   const { isMobile } = useScreenSize();
   const [open, setOpen] = useState(false);
   const [modal, showModal] = useState(false);
+
+  const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
+    console.log("Success:", values);
+  };
+
+  const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (
+    errorInfo,
+  ) => {
+    console.log("Failed:", errorInfo);
+  };
 
   if (isMobile) {
     return (
@@ -78,29 +95,49 @@ export const Header = () => {
         onOk={() => showModal(false)}
         onCancel={() => showModal(false)}
         footer={null}
+        width={{
+          xs: "90%",
+          md: "70%",
+          lg: "60%",
+          xl: "50%",
+        }}
       >
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum optio
-          quam iure reprehenderit! Quis repudiandae aspernatur rerum, tempore
-          veniam expedita ex nesciunt esse deleniti. Aspernatur enim corporis
-          quos optio unde. Dolore tempore aut placeat saepe obcaecati maxime
-          officiis nisi totam fuga voluptates dolor tenetur ut, animi officia,
-          nihil at voluptate praesentium minima sint magni. Exercitationem,
-          consectetur? Esse veritatis quia et voluptate quisquam quae tenetur
-          voluptatem laborum, magni aspernatur facere pariatur iusto eum?
-          Eligendi, inventore rem distinctio sapiente explicabo ducimus
-          voluptatum aliquid corporis obcaecati cumque in unde voluptates
-          impedit possimus repellat nam magni debitis, labore odio reiciendis?
-          Natus molestiae porro quidem?
-        </p>
-        <Flex gap={20}>
-          <AppButtonPrimary onClick={() => showModal(false)}>
-            Вход
-          </AppButtonPrimary>
-          <AppButtonSecondary onClick={() => showModal(false)}>
-            Регистрация
-          </AppButtonSecondary>
-        </Flex>
+        <Form
+          name="basic"
+          initialValues={{ remember: true }}
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+          autoComplete="off"
+          layout="vertical"
+        >
+          <Form.Item<FieldType>
+            label="Username"
+            name="username"
+            rules={[{ required: true, message: "Please input your username!" }]}
+          >
+            <Input />
+          </Form.Item>
+
+          <Form.Item<FieldType>
+            label="Password"
+            name="password"
+            rules={[{ required: true, message: "Please input your password!" }]}
+          >
+            <Input.Password />
+          </Form.Item>
+
+          <Form.Item<FieldType>
+            name="remember"
+            valuePropName="checked"
+            label={null}
+          >
+            <Checkbox>Remember me</Checkbox>
+          </Form.Item>
+
+          <Form.Item label={null}>
+            <AppButtonPrimary htmlType="submit">Submit</AppButtonPrimary>
+          </Form.Item>
+        </Form>
       </Modal>
     </div>
   );

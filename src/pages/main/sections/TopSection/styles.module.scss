@@ -52,7 +52,7 @@
 }
 
 .redBall {
-  background-color: #ffc4cf;
+  background-color: $light-red;
   width: 380px;
   height: 380px;
   border-radius: 50%;
@@ -63,7 +63,7 @@
 }
 
 .orangeBall {
-  background-color: #fff1d7;
+  background-color: $light-orange;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -74,7 +74,7 @@
 }
 
 .blueBall {
-  background-color: #b7daff;
+  background-color: $light-blue;
   width: 150px;
   height: 150px;
   border-radius: 50%;

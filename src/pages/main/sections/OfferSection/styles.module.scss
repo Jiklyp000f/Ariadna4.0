@@ -1,53 +1,84 @@
-.mainContainer {
+.wrapper {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  column-gap: $step-9;
+  row-gap: $step-5;
   flex-wrap: wrap;
 }
 
-.holderContainer {
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: $step-5;
+  flex-basis: 22%;
+}
+
+.round {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 250px;
-  flex: 1;
-  min-width: 200px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 2px solid $white;
 }
 
-.holderContainer img {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  margin-bottom: -50px;
-  z-index: 1;
-}
-
-.titleContainer {
-  border-radius: $step-2;
-  color: $white;
-  background-color: $primary;
-  padding: $step-4 $step-3;
+.imgWrapper {
+  width: 210px;
+  height: 210px;
+  background-color: $white;
+  border-radius: 50%;
+  padding: $step-4;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 120px;
-  width: 100%;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.round img {
+  width: 90%;
 }
 
 .description {
   font-size: $font-size-xl;
-  margin-bottom: 0;
-  text-shadow: 0 -1px $primary-darken-1;
+  font-weight: 200;
+  padding-top: $step-3;
+  border-top: 1px dashed $gray-2;
+  text-align: center;
+  text-wrap: balance;
 }
 
-.holderContainer > img {
-  transition: all 0.3s ease;
+.first {
+  background-color: $light-blue;
+
+  .imgWrapper {
+    transform: translate($step-2, $step-1);
+  }
 }
 
-.holderContainer:hover {
-  & > img {
-    transform: translate(0, -10px);
+.second {
+  background-color: $light-red;
+
+  .imgWrapper {
+    transform: translate(-$step-1, 0);
+  }
+}
+
+.third {
+  background-color: $light-orange;
+
+  .imgWrapper {
+    transform: translate($step-2, $step-1);
+  }
+}
+
+.fourth {
+  background-color: $light-green;
+
+  .imgWrapper {
+    transform: translate(-$step-2, -$step-1);
   }
 }
 
