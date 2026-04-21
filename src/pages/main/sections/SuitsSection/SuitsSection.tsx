@@ -8,7 +8,7 @@ import { Title } from "@/shared/ui/Titles";
 
 export const SuitsSection = () => {
   return (
-    <div className={style.mainContainer}>
+    <div className={style.wrapper}>
       <div className={style.item}>
         <img src={img1} alt="Турист" />
         <Title variant="4">Турист</Title>

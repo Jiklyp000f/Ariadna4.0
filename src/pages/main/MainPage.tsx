@@ -14,10 +14,9 @@ export const MainPage = () => {
       <MainLayout>
         <ContentLayout>
           <Section component={<TopSection />} />
-          <AppDivider />
           <Section title="Что предлагаем" component={<OfferSection />} />
           <AppDivider />
-          <Section component={<CardSection />} />
+          <Section title="Квесты" component={<CardSection />} />
           <AppDivider />
           <Section title="Кому подойдёт" component={<SuitsSection />} />
         </ContentLayout>

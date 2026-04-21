@@ -1,18 +1,13 @@
 import { Title } from "@/shared/ui/Titles";
-import type { Event } from "../../Sections/CardSection/types";
 import style from "./styles.module.scss";
 import { useNavigate } from "react-router-dom";
 import { AppButtonPrimary } from "@/shared/ui/button";
 import { FieldTimeOutlined } from "@ant-design/icons";
+import type { Event } from "@/pages/main/sections/CardSection/types";
 
-export const ProductCard = ({
-  img,
-  price,
-  time,
-  title,
-  disabled,
-  href,
-}: Event) => {
+export const ProductCard: React.FC<Event> = (props) => {
+  const { img, title, time, price, disabled, href } = props;
+
   const navigate = useNavigate();
   return (
     <div
@@ -24,15 +19,19 @@ export const ProductCard = ({
         <Title variant="4">{title}</Title>
       </div>
 
-      {time ? (
-        <div className={style.time}>
-          <FieldTimeOutlined />
-          <span>{time} минут</span>
-        </div>
-      ) : null}
+      <p className={style.description}>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Exercitationem, quibusdam!
+      </p>
 
-      <div className={style.price}>{price ? <p>{price} ₽</p> : null}</div>
-      <div className={style.button}>
+      <div className={style.bottom}>
+        {time && (
+          <div className={style.time}>
+            <FieldTimeOutlined />
+            <span>{time} минут</span>
+          </div>
+        )}
+        <div className={style.price}>{price ? <p>{price} ₽</p> : null}</div>
         <AppButtonPrimary
           wide
           disabled={disabled}

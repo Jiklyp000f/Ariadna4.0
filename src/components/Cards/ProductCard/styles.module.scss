@@ -6,26 +6,26 @@
   border-radius: 8px;
   transition: all 0.3s ease;
   border: 1px solid $gray-3;
+  background-color: $white;
 }
 
 .productCard > img {
   border-radius: 6px;
   width: 100%;
-  max-width: 290px;
-  height: 350px;
+  height: 200px;
   object-fit: cover;
   object-position: center;
   display: block;
   margin: 0 auto;
+  border: 1px solid $gray-3;
 }
 
 .productCard:hover {
-  box-shadow: 6px 8px 22px $gray-2;
-  transform: scale(1.005);
+  box-shadow: 3px 4px 10px $gray-3;
 }
 
 .titleContainer {
-  display: flex;
+  min-height: 50px;
 }
 
 .time {
@@ -42,8 +42,16 @@
 .price {
   font-size: 26px;
   font-weight: bold;
+  margin-top: auto;
 }
 
-.button {
+.description {
+  font-style: italic;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: $step-1;
   margin-top: auto;
 }

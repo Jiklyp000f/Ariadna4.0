@@ -1,9 +1,14 @@
-.topSectionContainer {
+.wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
   align-items: center;
   padding: 0 3em;
+  background-color: $white;
+  padding: $step-9;
+  border-radius: $step-2;
+  box-shadow: 0 0 36px $gray-3;
+  position: relative;
+  overflow: hidden;
 }
 
 .leftBlock {
@@ -11,10 +16,72 @@
   flex-direction: column;
   gap: 20px;
   width: 70%;
+  position: relative;
+  z-index: 1;
 }
 
 .rightBlock {
   width: 30%;
+}
+
+.description {
+  padding: $step-3 $step-4;
+  border-radius: $step-2;
+  margin-bottom: $step-5;
+  margin-top: $step-5;
+  background-color: color.adjust($primary, $lightness: 45%);
+  position: relative;
+  z-index: 1;
+  p {
+    font-size: $font-size-xl;
+    margin-bottom: $step-1;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: $step-3;
+  padding: 0;
+  margin: 0;
+  margin-left: $step-4;
+
+  li::marker {
+    color: $coral;
+  }
+}
+
+.redBall {
+  background-color: #ffc4cf;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: absolute;
+  top: -70%;
+  left: 2%;
+}
+
+.orangeBall {
+  background-color: #fff1d7;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: absolute;
+  bottom: -90px;
+  left: 45%;
+}
+
+.blueBall {
+  background-color: #b7daff;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: absolute;
+  top: -30px;
+  right: -30px;
 }
 
 @media (max-width: 768px) {

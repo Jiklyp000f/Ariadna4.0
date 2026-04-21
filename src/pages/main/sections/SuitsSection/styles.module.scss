@@ -1,8 +1,12 @@
-.mainContainer {
+.wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: $step-5;
   justify-content: space-around;
+  background-color: $white;
+  padding: $step-9 $step-4;
+  border-radius: $step-2;
+  box-shadow: 0 0 $step-9 $gray-3;
 }
 
 .item {
@@ -22,6 +26,8 @@
   img {
     height: 200px;
     width: 200px;
+    mix-blend-mode: multiply;
+    background-color: transparent;
   }
 }
 

@@ -5,6 +5,6 @@ type Props = {
   size?: "small" | "medium" | "large";
 };
 
-export const AppDivider: React.FC<Props> = ({ size = "small" }) => {
+export const AppDivider: React.FC<Props> = ({ size = "medium" }) => {
   return <div className={classNames(styles.divider, styles[size])}></div>;
 };
