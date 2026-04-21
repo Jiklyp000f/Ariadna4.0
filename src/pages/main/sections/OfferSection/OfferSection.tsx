@@ -3,7 +3,6 @@ import img1 from "@/assets/offerImg/image1.png";
 import img2 from "@/assets/offerImg/image2.png";
 import img3 from "@/assets/offerImg/image3.png";
 import img4 from "@/assets/offerImg/image4.png";
-import { Title } from "@/shared/ui/Titles";
 
 export const OfferSection = () => {
   return (
@@ -11,25 +10,29 @@ export const OfferSection = () => {
       <div className={style.holderContainer}>
         <img src={img1} alt="" />
         <div className={style.titleContainer}>
-          <Title variant="4">Доступ как с компьютера, так и смартфона</Title>
+          <p className={style.description}>
+            Доступ как с компьютера, так и смартфона
+          </p>
         </div>
       </div>
       <div className={style.holderContainer}>
         <img src={img2} alt="" />
         <div className={style.titleContainer}>
-          <Title variant="4">Доступные квест-экскурсии</Title>
+          <p className={style.description}>Доступные квест-экскурсии</p>
         </div>
       </div>
       <div className={style.holderContainer}>
         <img src={img3} alt="" />
         <div className={style.titleContainer}>
-          <Title variant="4">Безопасные маршруты</Title>
+          <p className={style.description}>Безопасные маршруты</p>
         </div>
       </div>
       <div className={style.holderContainer}>
         <img src={img4} alt="" />
         <div className={style.titleContainer}>
-          <Title variant="4">Возможность пользоваться в любое время </Title>
+          <p className={style.description}>
+            Возможность пользоваться в любое время
+          </p>
         </div>
       </div>
     </div>

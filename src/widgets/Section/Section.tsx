@@ -11,9 +11,12 @@ type Props = {
 export const Section: React.FC<Props> = ({ title, component }) => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.title}>
-        {title && <Title variant="2">{title}</Title>}
-      </div>
+      {title && (
+        <div className={styles.title}>
+          <Title variant="2">{title}</Title>
+        </div>
+      )}
+
       <div>{component}</div>
     </div>
   );

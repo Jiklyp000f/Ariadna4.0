@@ -24,21 +24,22 @@
 }
 
 .titleContainer {
-  border: $step-1 solid $primary;
   border-radius: $step-2;
-  padding: 20px 15px;
+  color: $white;
+  background-color: $primary;
+  padding: $step-4 $step-3;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 120px;
+  height: 120px;
   width: 100%;
 }
 
-.titleContainer h4,
-.titleContainer .title {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.2;
+.description {
+  font-size: $font-size-xl;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  text-shadow: 0 -1px $primary-darken-1;
 }
 
 .holderContainer:hover {

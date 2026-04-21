@@ -1,5 +1,5 @@
-import style from "./Navigation.module.css";
-import { NavigationItem } from "./NavigationItem/NavigationItem";
+import { NavigationItem } from "./NavigationItem";
+import style from "./styles.module.scss";
 
 const menuItems = [
   { id: 1, text: "Авторам" },
