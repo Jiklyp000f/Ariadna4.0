@@ -19,3 +19,27 @@ h6 {
 img {
   max-width: 100%;
 }
+
+a {
+  position: relative;
+  text-decoration: none !important;
+  transition: color 0.3s ease;
+  width: fit-content;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    border-bottom: 1px dashed currentColor;
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
