@@ -1,32 +1,51 @@
 import style from "./styles.module.scss";
-import vkIcon from "@/assets/image/icons/vk.png";
-import tgIcon from "@/assets/image/icons/telegram.png";
+import maxIcon from "@/assets/image/icons/max_icon.svg";
+import vkIcon from "@/assets/image/icons/vk_icon.svg";
 import { Logo } from "@/components/Logo";
 import { Title } from "@/shared/ui/Titles";
+import {
+  HomeOutlined,
+  MailOutlined,
+  PhoneOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
 
 export const Footer = () => {
   return (
     <footer className={style.footer}>
       <div className={style.contacts}>
-        <div className={style.footerLogo}>
-          <Logo />
-        </div>
         <div className={style.contactsInfo}>
           <Title variant={"4"}>Контакты</Title>
           <div>
-            <p>ООО “В ПУТЬ”</p>
-            <p>Адрес: Йошкар-Ола,</p>
-            <p>Ул. Ленинский пр-кт, д. 52А, кв. 73</p>
-            <p>Телефон: 8(902) 105- 91-82</p>
-            <p>Эл. почта: osokinap74@gmail.com</p>
+            <p>
+              <UserOutlined />
+              <span>ООО «В ПУТЬ»</span>
+            </p>
+            <p>
+              <HomeOutlined />
+              <span>Йошкар-Ола,ул. Ленинский пр-кт, д. 52А, кв. 73</span>
+            </p>
+            <p>
+              <PhoneOutlined /> <a href="tel:+79021059182">8 (902) 105-91-82</a>
+            </p>
+            <p>
+              <MailOutlined />{" "}
+              <a href="mailto:osokinap74@gmail.com">osokinap74@gmail.com</a>
+            </p>
           </div>
 
           <div className={style.social}>
-            <img src={vkIcon} alt="vk" />
-            <img src={tgIcon} alt="tg" />
+            <a href="#">
+              <img src={vkIcon} alt="vk" className={style.vk} />
+            </a>
+
+            <a href="#">
+              <img src={maxIcon} alt="max" className={style.max} />
+            </a>
           </div>
         </div>
       </div>
+
       <div className={style.help}>
         <Title variant={"4"}>Помощь</Title>
         <div className={style.helpLinks}>
@@ -35,6 +54,11 @@ export const Footer = () => {
           <a href="/404">Правила пользования</a>
           <a href="/404">Термины</a>
         </div>
+      </div>
+
+      <div className={style.footerLogo}>
+        <p>&copy; ООО «В ПУТЬ» 2026. Все права защищены.</p>
+        <Logo />
       </div>
     </footer>
   );

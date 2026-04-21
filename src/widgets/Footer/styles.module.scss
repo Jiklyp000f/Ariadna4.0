@@ -1,9 +1,34 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
-  background-color: $gray-1;
-  color: white;
+  padding: 0 $step-5;
+  background-color: $dark-3;
+  color: $white;
+
+  h4 {
+    font-weight: 900 !important;
+    color: $gray-1;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: $step-2;
+    color: $gray-5;
+    font-size: 14px;
+    font-weight: 200;
+    display: flex;
+    gap: $step-2;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    font-weight: 200;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .footer > div {
@@ -24,7 +49,25 @@
 
 .social {
   display: flex;
-  gap: 5px;
+  gap: $step-3;
+  align-items: center;
+
+  a {
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.max,
+.vk {
+  height: 56px;
+}
+
+.max {
+  height: 42px;
 }
 
 .social > img {
@@ -40,16 +83,35 @@
 .helpLinks {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: $step-1;
 }
 
 .helpLinks > a {
-  color: white;
+  color: $white;
 }
 
 .helpLinks > a:hover {
-  color: rgb(216, 255, 234);
   text-decoration: underline;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  height: 120px;
+  flex-basis: 400px !important;
+  flex-shrink: 0;
+  margin-top: $step-4;
+
+  img {
+    height: 120px;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
 }
 
 @media (max-width: 768px) {
