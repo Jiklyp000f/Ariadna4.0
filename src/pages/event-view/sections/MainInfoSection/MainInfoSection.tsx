@@ -4,6 +4,18 @@ import { Title } from "@/shared/ui/Titles";
 import { Description } from "./Description";
 import { DescriptionItem } from "./Description/DescriptionItem";
 import { Rate } from "antd";
+import { addToOrder } from "@/store/orderStore";
+import { AppButtonPrimary } from "@/shared/ui/button";
+import { PlusCircleOutlined } from "@ant-design/icons";
+
+const eventData = {
+  id: 1,
+  title: "«Тайны застывших легенд»",
+  description:
+    "Квест-экскурсия по скульптурам исторических личностей города Йошкар-Олы",
+  rating: 4.5,
+  price: 500,
+};
 
 export const MainInfoSection = () => {
   return (
@@ -18,6 +30,13 @@ export const MainInfoSection = () => {
             Квест-экскурсия по скульптурам исторических личностей города
             Йошкар-Олы
           </p>
+
+          <AppButtonPrimary
+            icon={<PlusCircleOutlined />}
+            onClick={() => addToOrder(eventData)}
+          >
+            В корзину
+          </AppButtonPrimary>
           <div className={style.description}>
             <p>
               Интерактивная квест-экскурсия по набережной Йошкар - Олы раскроет
