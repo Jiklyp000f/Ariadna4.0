@@ -8,6 +8,7 @@ import "./swiper.styles.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Image } from "antd";
 
 export const SliderSection = () => {
   return (
@@ -30,7 +31,7 @@ export const SliderSection = () => {
           {slidesData.map((slide) => (
             <SwiperSlide key={slide.id}>
               <div className={style.slide}>
-                <img
+                <Image
                   src={slide.imageUrl}
                   alt={slide.alt}
                   className={style.image}

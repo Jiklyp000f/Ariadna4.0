@@ -19,6 +19,25 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  // Добавленные стили для Ant Design Image
+  :global(.ant-image) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  :global(.ant-image-img) {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  :global(.ant-image-img):hover {
+    transform: scale(1.05);
+  }
 }
 
 .image {
@@ -64,14 +83,12 @@
     height: 200px;
   }
 
-  :global(.swiper-button-next),
-  :global(.swiper-button-prev) {
-    width: 30px;
-    height: 30px;
+  .slide :global(.ant-image-img) {
+    height: 200px;
   }
 
-  :global(.swiper-button-next:after),
-  :global(.swiper-button-prev:after) {
-    font-size: 14px;
+  :global(.swiper-button-next),
+  :global(.swiper-button-prev) {
+    display: none !important;
   }
 }

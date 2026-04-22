@@ -94,7 +94,12 @@
 
   .item {
     flex-direction: row;
+    border-right: none;
     border-bottom: 1px dashed $gray-2;
+
+    &:last-child {
+      border-bottom: none;
+    }
   }
 
   .time {

@@ -13,7 +13,7 @@
   p {
     margin: 0;
     margin-bottom: $step-2;
-    color: $gray-5;
+    color: $gray-3;
     font-size: 14px;
     font-weight: 200;
     display: flex;
@@ -21,7 +21,7 @@
   }
 
   a {
-    color: $white;
+    color: $gray-3;
     text-decoration: none;
     font-weight: 200;
 
@@ -60,6 +60,7 @@
 
   a {
     opacity: 0.7;
+    transition: opacity 0.3s ease;
 
     &::after {
       display: none;
@@ -90,14 +91,6 @@
   display: flex;
   flex-direction: column;
   gap: $step-1;
-}
-
-.helpLinks > a {
-  color: $white;
-}
-
-.helpLinks > a:hover {
-  text-decoration: underline;
 }
 
 p.copy {

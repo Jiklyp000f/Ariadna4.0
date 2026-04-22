@@ -27,14 +27,14 @@
 }
 
 .subtitle {
-  color: $dark-1;
+  color: $dark-3;
   font-weight: 300;
-  background-color: $light-blue;
-  padding: $step-2 $step-3;
+  border-top: $step-1 - 1 dotted $light-blue;
+  border-bottom: $step-1 - 1 dotted $light-blue;
+  padding: $step-2 0;
   line-height: 1.4;
   font-size: $font-size-lg;
-  border-radius: $step-2;
-  opacity: 0.9;
+  margin-top: $step-3;
 }
 
 .description {

@@ -4,7 +4,6 @@ import { Section } from "@/widgets/Section";
 import {
   MainInfoSection,
   MapSection,
-  QRSection,
   ReadySection,
   SliderSection,
 } from "./sections";

@@ -4,3 +4,10 @@
   gap: 60px;
   padding: $step-6 $step-5;
 }
+
+@media (max-width: 768px) {
+  .contentLayout {
+    gap: $step-4;
+    padding: $step-4 $step-1;
+  }
+}

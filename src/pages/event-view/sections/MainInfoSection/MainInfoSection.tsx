@@ -3,6 +3,7 @@ import batyshka from "@/assets/image/batyshka.png";
 import { Title } from "@/shared/ui/Titles";
 import { Description } from "./Description";
 import { DescriptionItem } from "./Description/DescriptionItem";
+import { Rate } from "antd";
 
 export const MainInfoSection = () => {
   return (
@@ -12,11 +13,11 @@ export const MainInfoSection = () => {
       </div>
       <div className={style.right}>
         <div>
+          <Title variant="2">«Тайны застывших легенд»</Title>
           <p className={style.subtitle}>
             Квест-экскурсия по скульптурам исторических личностей города
             Йошкар-Олы
           </p>
-          <Title variant="2">«Тайны застывших легенд»</Title>
           <div className={style.description}>
             <p>
               Интерактивная квест-экскурсия по набережной Йошкар - Олы раскроет
@@ -26,6 +27,7 @@ export const MainInfoSection = () => {
               семей, туристов и любителей истории!
             </p>
           </div>
+          <Rate allowHalf defaultValue={4.5} />
         </div>
 
         <Description>

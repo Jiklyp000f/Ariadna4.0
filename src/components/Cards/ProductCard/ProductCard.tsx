@@ -21,10 +21,10 @@ export const ProductCard: React.FC<Event> = (props) => {
       </div>
 
       <p className={style.description}>
-        Здравствуйте товарищи начинаем программу телепередач на зватра!
+        Здравствуйте товарищи начинаем программу телепередач на завтра!
       </p>
 
-      <Rate allowHalf defaultValue={2.5} />
+      <Rate allowHalf defaultValue={4.5} />
 
       <div className={style.bottom}>
         {time && (
