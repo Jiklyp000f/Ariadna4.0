@@ -21,8 +21,8 @@
 }
 
 .label {
-  color: $gray-1;
-  font-weight: 500;
+  color: $gray-2;
+  font-weight: 400;
   font-size: $font-size-sm;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -70,8 +70,7 @@
   }
 
   .value {
-    color: $primary;
-    font-weight: 600;
+    font-weight: 800;
     font-size: $font-size-xxxl;
   }
 
