@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { AppButtonPrimary } from "@/shared/ui/button";
 import { FieldTimeOutlined } from "@ant-design/icons";
 import type { Event } from "@/pages/main/sections/CardSection/types";
+import { Rate } from "antd";
 
 export const ProductCard: React.FC<Event> = (props) => {
   const { img, title, time, price, disabled, href } = props;
@@ -20,9 +21,10 @@ export const ProductCard: React.FC<Event> = (props) => {
       </div>
 
       <p className={style.description}>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        Exercitationem, quibusdam!
+        Здравствуйте товарищи начинаем программу телепередач на зватра!
       </p>
+
+      <Rate allowHalf defaultValue={2.5} />
 
       <div className={style.bottom}>
         {time && (

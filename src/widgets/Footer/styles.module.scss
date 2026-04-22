@@ -38,22 +38,32 @@
 
 .contacts {
   display: flex;
-  gap: 10px;
+  gap: $step-2;
 }
 
 .contactsInfo {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: $step-2;
+}
+
+.socBlock {
+  display: flex;
+  flex-direction: column;
+  gap: $step-2;
 }
 
 .social {
   display: flex;
-  gap: $step-3;
+  gap: $step-4;
   align-items: center;
 
   a {
     opacity: 0.7;
+
+    &::after {
+      display: none;
+    }
 
     &:hover {
       opacity: 1;
@@ -63,15 +73,11 @@
 
 .max,
 .vk {
-  height: 56px;
+  height: 50px;
 }
 
 .max {
-  height: 42px;
-}
-
-.social > img {
-  width: 60px;
+  height: 34px;
 }
 
 .help {
@@ -94,15 +100,17 @@
   text-decoration: underline;
 }
 
-.footerLogo {
-  display: flex;
-  align-items: center;
-  height: 120px;
-  flex-basis: 400px !important;
-  flex-shrink: 0;
-  margin-top: $step-4;
+p.copy {
+  color: $gray-2;
+}
 
-  img {
+.socialWrapper {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: $step-3;
+
+  & > img {
     height: 120px;
     filter: grayscale(100%);
     opacity: 0.5;
@@ -118,7 +126,7 @@
   .footer {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: $step-1;
     position: relative;
   }
 

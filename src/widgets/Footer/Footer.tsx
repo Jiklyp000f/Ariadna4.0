@@ -1,7 +1,6 @@
 import style from "./styles.module.scss";
 import maxIcon from "@/assets/image/icons/max_icon.svg";
 import vkIcon from "@/assets/image/icons/vk_icon.svg";
-import { Logo } from "@/components/Logo";
 import { Title } from "@/shared/ui/Titles";
 import {
   HomeOutlined,
@@ -15,7 +14,7 @@ export const Footer = () => {
     <footer className={style.footer}>
       <div className={style.contacts}>
         <div className={style.contactsInfo}>
-          <Title variant={"4"}>Контакты</Title>
+          <Title variant="4">Контакты</Title>
           <div>
             <p>
               <UserOutlined />
@@ -33,7 +32,22 @@ export const Footer = () => {
               <a href="mailto:osokinap74@gmail.com">osokinap74@gmail.com</a>
             </p>
           </div>
+        </div>
+      </div>
 
+      <div className={style.help}>
+        <Title variant="4">Помощь</Title>
+        <div className={style.helpLinks}>
+          <a href="/404">Скидки</a>
+          <a href="/404">Форматы квестов</a>
+          <a href="/404">Правила пользования</a>
+          <a href="/404">Термины</a>
+        </div>
+      </div>
+
+      <div className={style.socBlock}>
+        <Title variant="4">Соцсети</Title>
+        <div className={style.socialWrapper}>
           <div className={style.social}>
             <a href="#">
               <img src={vkIcon} alt="vk" className={style.vk} />
@@ -43,22 +57,10 @@ export const Footer = () => {
               <img src={maxIcon} alt="max" className={style.max} />
             </a>
           </div>
+          <p className={style.copy}>
+            &copy; ООО «В ПУТЬ» 2026. Все права защищены.
+          </p>
         </div>
-      </div>
-
-      <div className={style.help}>
-        <Title variant={"4"}>Помощь</Title>
-        <div className={style.helpLinks}>
-          <a href="/404">Скидки</a>
-          <a href="/404">Форматы квестов</a>
-          <a href="/404">Правила пользования</a>
-          <a href="/404">Термины</a>
-        </div>
-      </div>
-
-      <div className={style.footerLogo}>
-        <p>&copy; ООО «В ПУТЬ» 2026. Все права защищены.</p>
-        <Logo />
       </div>
     </footer>
   );
