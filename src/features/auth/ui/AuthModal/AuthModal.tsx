@@ -22,7 +22,7 @@ export const AuthModal: React.FC<Props> = ({ open, showModal }) => {
       }}
     >
       <div className={style.form}>
-        <AuthModalTabs showLoginModal={showModal} />
+        <AuthModalTabs showModal={showModal} />
       </div>
     </Modal>
   );

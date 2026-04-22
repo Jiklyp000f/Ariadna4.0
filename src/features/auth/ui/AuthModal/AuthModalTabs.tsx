@@ -3,11 +3,10 @@ import { RegisterForm } from "../RegisterForm";
 import { LoginForm } from "../LoginForm";
 
 type Props = {
-  showLoginModal: (open: boolean) => void;
-  showRegisterModal: (open: boolean) => void;
+  showModal: (open: boolean) => void;
 };
 
-export const AuthModalTabs: React.FC<Props> = ({ showLoginModal }) => {
+export const AuthModalTabs: React.FC<Props> = ({ showModal }) => {
   const onChange = (key: string) => {
     console.log(key);
   };
@@ -16,12 +15,12 @@ export const AuthModalTabs: React.FC<Props> = ({ showLoginModal }) => {
     {
       key: "1",
       label: "Вход",
-      children: <LoginForm showModal={showLoginModal} />,
+      children: <LoginForm showModal={showModal} />,
     },
     {
       key: "2",
       label: "Регистрация",
-      children: <RegisterForm showModal={showLoginModal} />,
+      children: <RegisterForm showModal={showModal} />,
     },
   ];
 
