@@ -25,8 +25,6 @@ export const EventPage = () => {
             title="Не забудьте подготовиться"
             component={<ReadySection />}
           />
-          <AppDivider />
-          <Section title="Играем через" component={<QRSection />} />
         </ContentLayout>
       </MainLayout>
     </>

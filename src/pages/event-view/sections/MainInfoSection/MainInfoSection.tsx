@@ -31,7 +31,7 @@ export const MainInfoSection = () => {
         <Description>
           <DescriptionItem
             label="Продолжительность"
-            value="75 — 90"
+            value="75 - 90"
             units="минут"
           ></DescriptionItem>
           <DescriptionItem

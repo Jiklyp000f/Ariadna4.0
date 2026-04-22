@@ -5,6 +5,8 @@ import "antd/dist/reset.css";
 import "./main.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { routes } from "./app/routes";
+import { ConfigProvider } from "antd";
+import { themeConfig } from "./shared/config";
 
 //TODO: модалка, поменять телегу на макс, шрифты, аннотация(небольшое описание карточек товара),
 //  поменять лого, навигация увеличить шрифт, уменьшить шрифт перед футером,
@@ -31,6 +33,8 @@ const router = createBrowserRouter(routes);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ConfigProvider theme={themeConfig}>
+      <RouterProvider router={router} />
+    </ConfigProvider>
   </StrictMode>,
 );

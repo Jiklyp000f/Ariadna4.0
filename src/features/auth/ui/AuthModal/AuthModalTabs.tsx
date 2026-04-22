@@ -7,10 +7,6 @@ type Props = {
 };
 
 export const AuthModalTabs: React.FC<Props> = ({ showModal }) => {
-  const onChange = (key: string) => {
-    console.log(key);
-  };
-
   const items: TabsProps["items"] = [
     {
       key: "1",
@@ -24,5 +20,5 @@ export const AuthModalTabs: React.FC<Props> = ({ showModal }) => {
     },
   ];
 
-  return <Tabs defaultActiveKey="1" items={items} onChange={onChange} />;
+  return <Tabs defaultActiveKey="1" items={items} />;
 };
