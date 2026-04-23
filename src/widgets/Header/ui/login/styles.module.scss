@@ -1,0 +1,14 @@
+.logout {
+  font-size: $font-size-xxxl;
+  color: $dark-3;
+  cursor: pointer;
+
+  &:hover {
+    color: $dark-1;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}

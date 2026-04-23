@@ -1,0 +1,51 @@
+.wrapper {
+  padding: $step-6 $step-8;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: $step-8;
+}
+
+.empty {
+  font-size: $font-size-xl;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  padding: $step-3 0;
+  font-size: $font-size-lg;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray-3;
+  }
+}
+
+.itemPrice {
+  font-size: $font-size-lg;
+  font-weight: 600;
+}
+
+.order {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.orderTotal {
+  display: flex;
+  flex-direction: column;
+}
+
+.orderPrice {
+  font-size: $font-size-xxxl;
+  font-weight: 700;
+}

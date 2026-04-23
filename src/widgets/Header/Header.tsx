@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
-import { Login } from "@/components/Login";
+import { Login } from "@/widgets/Header/ui/login";
 import { Logo } from "@/components/Logo";
 import { useScreenSize } from "@/shared/lib/useScreenSize";
 import { AuthModal } from "@/features/auth";
+import { Cart } from "./ui/cart";
 import style from "./styles.module.scss";
 
 export const Header = () => {
@@ -63,11 +64,14 @@ export const Header = () => {
           navigate("/404");
         }}
       />
-      <Login
-        onClick={() => {
-          changeModal(true);
-        }}
-      />
+      <div className={style.actions}>
+        <Cart />
+        <Login
+          onClick={() => {
+            changeModal(true);
+          }}
+        />
+      </div>
 
       <AuthModal open={isOpen} showModal={changeModal} />
     </div>

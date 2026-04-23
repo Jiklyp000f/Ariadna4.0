@@ -1,6 +1,7 @@
 import { AppButtonPrimary } from "@/shared/ui/button";
 import { Form, Input, notification, type FormProps } from "antd";
 import style from "./styles.module.scss";
+import { auth } from "@/store/authStore";
 
 type FieldType = {
   username?: string;
@@ -48,6 +49,7 @@ export const LoginForm: React.FC<Props> = ({ showModal }) => {
   const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
     openSuccessNotification(`${values.username}, вы успешно вошли!`);
     showModal(false);
+    auth();
   };
 
   const onFailed: FormProps<FieldType>["onFinishFailed"] = (errorInfo) => {

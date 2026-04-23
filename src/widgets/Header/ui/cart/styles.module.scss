@@ -1,0 +1,13 @@
+.cart {
+  display: flex;
+  align-items: center;
+  gap: $step-3;
+  color: $dark-5;
+  border-radius: $step-1;
+  padding: $step-2 $step-3;
+  cursor: pointer;
+
+  &:hover {
+    background: $white;
+  }
+}

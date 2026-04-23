@@ -11,36 +11,31 @@ export type Order = {
 };
 
 type State = {
-  bears: number;
   orders: Order[];
 };
 
 type Actions = {
-  increasePopulation: () => void;
-  removeAllBears: () => void;
   addToOrder: (order: Order) => void;
   removeFromOrder: (id: number) => void;
+  clearOrder: () => void;
 };
 
 export const useOrderStore = create<State & Actions>()(
   persist(
-    (set, get) => ({
-      bears: 0,
+    (set) => ({
       orders: [],
-      increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-      removeAllBears: () => set({ bears: 0 }),
       addToOrder: (order: Order) => {
-        const existingOrder = get().orders.find((item) => item.id === order.id);
+        // const existingOrder = get().orders.find((item) => item.id === order.id);
 
-        if (existingOrder) {
-          notification.warning({
-            message: "Товар уже в корзине",
-            description: `${order.title} уже добавлен в ваш заказ`,
-            placement: "bottomRight",
-            duration: 1,
-          });
-          return;
-        }
+        // if (existingOrder) {
+        //   notification.warning({
+        //     message: "Товар уже в корзине",
+        //     description: `${order.title} уже добавлен в ваш заказ`,
+        //     placement: "bottomRight",
+        //     duration: 1,
+        //   });
+        //   return;
+        // }
 
         set((state) => ({ orders: [...state.orders, order] }));
 
@@ -63,6 +58,9 @@ export const useOrderStore = create<State & Actions>()(
           duration: 2,
         });
       },
+      clearOrder: () => {
+        set({ orders: [] });
+      },
     }),
     {
       name: "order-storage",
@@ -70,18 +68,14 @@ export const useOrderStore = create<State & Actions>()(
   ),
 );
 
-export const increasePopulation = () => {
-  useOrderStore.getState().increasePopulation();
-};
-
 export const addToOrder = (order: Order) => {
   return useOrderStore.getState().addToOrder(order);
 };
 
-export const removeAllBears = () => {
-  useOrderStore.getState().removeAllBears();
-};
-
 export const removeFromOrder = (id: number) => {
   useOrderStore.getState().removeFromOrder(id);
+};
+
+export const clearOrder = () => {
+  useOrderStore.getState().clearOrder();
 };
