@@ -24,7 +24,6 @@ import { themeConfig } from "./shared/config";
  * - Проверить адаптивку
  * - Какой логотип?
  * - Шрифты какие?
- * - Решить проблемы с secondary button
  * - Добавить lazyLoading
  */
 

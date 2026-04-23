@@ -78,8 +78,9 @@
   @include noWave();
 
   &:global(.ant-btn-color-default) {
-    background-color: $white;
+    background-color: transparent;
     @include baseButton();
+    color: $dark-1;
 
     &:not(:disabled) {
       &:active {
@@ -89,6 +90,7 @@
       &:hover {
         background-color: $gray-3;
         border-color: $gray-3;
+        color: $dark-1;
       }
 
       &:focus-visible {
