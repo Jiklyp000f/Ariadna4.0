@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { message, notification } from "antd";
+import { message } from "antd";
 
 export type Order = {
   id: number;
@@ -49,10 +49,8 @@ export const useOrderStore = create<State & Actions>()(
           orders: state.orders.filter((order) => order.id !== id),
         }));
 
-        notification.info({
-          message: "Товар удален",
-          description: "Товар успешно удален из корзины",
-          placement: "topRight",
+        message.info({
+          content: "Товар успешно удален из корзины",
           duration: 2,
         });
       },

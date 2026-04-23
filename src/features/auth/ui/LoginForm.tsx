@@ -1,7 +1,8 @@
 import { AppButtonPrimary } from "@/shared/ui/button";
-import { Form, Input, notification, type FormProps } from "antd";
+import { Form, Input, type FormProps } from "antd";
 import style from "./styles.module.scss";
 import { auth } from "@/store/authStore";
+import { message } from "antd";
 
 type FieldType = {
   username?: string;
@@ -20,40 +21,28 @@ type Props = {
 };
 
 export const LoginForm: React.FC<Props> = ({ showModal }) => {
-  const [api, contextHolder] = notification.useNotification();
-
-  const openErrorNotification = (message: string) => {
-    api.open({
-      title: "Ошибка входа",
-      type: "error",
-      description: message,
-      placement: "bottomRight",
-      showProgress: true,
-      pauseOnHover: true,
+  const showErrorMessage = (text: string) => {
+    message.error({
+      content: text,
       duration: 2,
     });
   };
 
-  const openSuccessNotification = (message: string) => {
-    api.open({
-      title: "Авторизация",
-      type: "success",
-      description: message,
-      placement: "bottomRight",
-      showProgress: true,
-      pauseOnHover: true,
+  const showSuccessMessage = (text: string) => {
+    message.success({
+      content: text,
       duration: 2,
     });
   };
 
   const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
-    openSuccessNotification(`${values.username}, вы успешно вошли!`);
+    showSuccessMessage(`${values.username}, вы успешно вошли!`);
     showModal(false);
     auth();
   };
 
   const onFailed: FormProps<FieldType>["onFinishFailed"] = (errorInfo) => {
-    openErrorNotification(errorInfo.errorFields[0].errors[0]);
+    showErrorMessage(errorInfo.errorFields[0].errors[0]);
   };
 
   return (
@@ -65,7 +54,6 @@ export const LoginForm: React.FC<Props> = ({ showModal }) => {
       layout="vertical"
       size="large"
     >
-      {contextHolder}
       <Form.Item<FieldType>
         label="Email"
         name="username"
