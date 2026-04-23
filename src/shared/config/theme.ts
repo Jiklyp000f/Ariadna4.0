@@ -1,9 +1,14 @@
+import { Colors } from "../constants";
+
 export const themeConfig = {
   components: {
     Tabs: {
-      inkBarColor: "#1ca56f",
-      itemSelectedColor: "#1ca56f",
-      itemHoverColor: "#1ca56f",
+      inkBarColor: Colors.primary,
+      itemSelectedColor: Colors.primary,
+      itemHoverColor: Colors.primary,
+    },
+    Spin: {
+      colorPrimary: Colors.primary,
     },
   },
 };

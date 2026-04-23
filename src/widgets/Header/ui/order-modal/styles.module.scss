@@ -1,11 +1,11 @@
 .wrapper {
-  padding: $step-6 $step-8;
+  padding: $step-4 $step-1;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: $step-8;
+  gap: $step-3;
 }
 
 .empty {
@@ -48,4 +48,5 @@
 .orderPrice {
   font-size: $font-size-xxxl;
   font-weight: 700;
+  margin-top: -$step-2;
 }

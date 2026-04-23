@@ -1,7 +1,7 @@
-import style from "./styles.module.scss";
 import img from "@/assets/image/topSection/orig.webp";
 import { useScreenSize } from "@/shared/lib/useScreenSize";
 import { Title } from "@/shared/ui/Titles";
+import style from "./styles.module.scss";
 
 export const TopSection = () => {
   const { isMobile } = useScreenSize();

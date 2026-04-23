@@ -2,6 +2,7 @@ import { useOrderStore } from "@/store/orderStore";
 import { Modal } from "antd";
 import styles from "./styles.module.scss";
 import { AppButtonPrimary } from "@/shared/ui/button";
+import { Title } from "@/shared/ui/Titles";
 
 interface Props {
   open: boolean;
@@ -23,6 +24,7 @@ export const OrderModal: React.FC<Props> = ({ open, showModal }) => {
 
   return (
     <Modal
+      title={<Title variant="3">Корзина</Title>}
       open={open}
       onOk={handleClose}
       onCancel={handleClose}
