@@ -1,5 +1,5 @@
-import logoImage from "@/assets/image/logo.svg";
-import style from "./Logo.module.css";
+// import logoImage from "@/assets/image/logo.svg";
+// import style from "./Logo.module.css";
 
 type Props = {
   onClick?: () => void;
@@ -15,6 +15,6 @@ export const Logo: React.FC<Props> = ({ onClick }) => {
     //     onClick?.();
     //   }}
     // />
-    <span>Logo</span>
+    <span onClick={onClick}>Logo</span>
   );
 };

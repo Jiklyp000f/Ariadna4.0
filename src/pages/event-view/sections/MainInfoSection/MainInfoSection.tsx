@@ -7,6 +7,7 @@ import { Rate } from "antd";
 import { addToOrder } from "@/store/orderStore";
 import { AppButtonPrimary } from "@/shared/ui/button";
 import { PlusCircleOutlined } from "@ant-design/icons";
+import { useAuthStore } from "@/store/authStore";
 
 const eventData = {
   id: 1,
@@ -18,6 +19,7 @@ const eventData = {
 };
 
 export const MainInfoSection = () => {
+  const isAuth = useAuthStore((state) => state.isAuth);
   return (
     <div className={style.wrapper}>
       <div className={style.left}>
@@ -31,12 +33,15 @@ export const MainInfoSection = () => {
             Йошкар-Олы
           </p>
 
-          <AppButtonPrimary
-            icon={<PlusCircleOutlined />}
-            onClick={() => addToOrder(eventData)}
-          >
-            В корзину
-          </AppButtonPrimary>
+          {isAuth && (
+            <AppButtonPrimary
+              icon={<PlusCircleOutlined />}
+              onClick={() => addToOrder(eventData)}
+            >
+              В корзину
+            </AppButtonPrimary>
+          )}
+
           <div className={style.description}>
             <p>
               Интерактивная квест-экскурсия по набережной Йошкар - Олы раскроет

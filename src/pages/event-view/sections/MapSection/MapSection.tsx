@@ -7,10 +7,12 @@ export const MapSection = () => {
   const coordinates = [56.635635, 47.876881];
   const endPoint = [56.645, 47.885];
   const { isMobile } = useScreenSize();
-  const mapRef = useRef<any>(null);
-  const [map, setMap] = useState<any>(null);
+  const mapRef = useRef(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_, setMap] = useState(null);
 
   // Обработчик загрузки карты
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleMapLoad = (mapInstance: any) => {
     mapRef.current = mapInstance;
     setMap(mapInstance);
