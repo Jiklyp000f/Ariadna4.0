@@ -21,6 +21,24 @@
   align-items: center;
 }
 
+.menu {
+  background: $white;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  box-shadow: 0 0 $step-2 $gray-3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $step-3;
+}
+
+.burger {
+  font-size: $font-size-xxxl;
+}
+
 @media (max-width: 1024px) {
   .header {
     padding: 1rem 1.5rem;
@@ -41,33 +59,6 @@
     padding: 0.75rem;
     gap: 0.75rem;
   }
-}
-
-/* Новые стили для бургер меню */
-.burgerIcon {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 10;
-  width: 30px;
-  height: 24px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.burgerIcon span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #333;
-  border-radius: 1px;
-  transition: all 0.3s ease;
-}
-
-.burgerIcon:hover span {
-  background-color: rgb(61, 213, 152);
 }
 
 .overlay {
@@ -98,23 +89,17 @@
   overflow-y: auto;
 }
 
-.closeBtn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 30px;
-  height: 30px;
+.close {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  cursor: pointer;
-  color: #666;
-  transition: color 0.3s ease;
+  justify-content: flex-end;
+  font-size: $font-size-xxxl;
+  gap: 20px;
 }
 
-.closeBtn:hover {
-  color: rgb(61, 213, 152);
+.mobileLogin {
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes slideIn {

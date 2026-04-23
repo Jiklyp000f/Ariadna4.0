@@ -7,13 +7,14 @@ type Props = {
 
 export const Logo: React.FC<Props> = ({ onClick }) => {
   return (
-    <img
-      src={logoImage}
-      alt="Logo"
-      className={style.logo}
-      onClick={() => {
-        onClick?.();
-      }}
-    />
+    // <img
+    //   src={logoImage}
+    //   alt="Logo"
+    //   className={style.logo}
+    //   onClick={() => {
+    //     onClick?.();
+    //   }}
+    // />
+    <span>Logo</span>
   );
 };

@@ -1,6 +1,6 @@
 import { Title } from "@/shared/ui/Titles";
-import styles from "./styles.module.scss";
 import type { Variant } from "@/shared/ui/Titles/types";
+import styles from "./styles.module.scss";
 
 type Props = {
   title?: string;

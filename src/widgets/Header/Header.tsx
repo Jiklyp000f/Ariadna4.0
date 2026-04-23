@@ -6,8 +6,10 @@ import { Logo } from "@/components/Logo";
 import { useScreenSize } from "@/shared/lib/useScreenSize";
 import { AuthModal } from "@/features/auth";
 import { Cart } from "./ui/cart";
-import style from "./styles.module.scss";
 import { OrderModal } from "./ui/order-modal";
+import style from "./styles.module.scss";
+import { MenuOutlined } from "@ant-design/icons";
+import { MobileMenu } from "./ui/mobile-menu/MobileMenu";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -19,41 +21,25 @@ export const Header = () => {
   if (isMobile) {
     return (
       <>
-        <div className={style.burgerIcon} onClick={() => setOpen(true)}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        {open && (
-          <div className={style.overlay} onClick={() => setOpen(false)}>
-            <div
-              className={style.burgerMenu}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className={style.closeBtn} onClick={() => setOpen(false)}>
-                ✕
-              </div>
-              <Logo
-                onClick={() => {
-                  navigate("/");
-                  setOpen(false);
-                }}
-              />
-              <Navigation
-                onClick={() => {
-                  navigate("/404");
-                  setOpen(false);
-                }}
-              />
-              <Login
-                onClick={() => {
-                  navigate("/auth");
-                  setOpen(false);
-                }}
-              />
-            </div>
+        <div className={style.menu}>
+          <span>Logo</span>
+          <div className={style.actions}>
+            <Cart onClick={() => changeOrderModal(true)} />
+            <MenuOutlined
+              className={style.burger}
+              onClick={() => setOpen(true)}
+            />
           </div>
-        )}
+        </div>
+
+        <MobileMenu
+          open={open}
+          setOpen={setOpen}
+          changeAuthModal={changeAuthModal}
+        />
+
+        <AuthModal open={isOpenAuth} showModal={changeAuthModal} />
+        <OrderModal open={isOpenOrder} showModal={changeOrderModal} />
       </>
     );
   }

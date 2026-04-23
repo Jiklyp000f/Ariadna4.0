@@ -1,7 +1,7 @@
 import { useOrderStore } from "@/store/orderStore";
 import { ShoppingCartOutlined } from "@ant-design/icons";
-import style from "./styles.module.scss";
 import { useAuthStore } from "@/store/authStore";
+import style from "./styles.module.scss";
 
 interface LoginProps {
   onClick?: () => void;

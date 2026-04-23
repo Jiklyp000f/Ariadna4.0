@@ -95,6 +95,7 @@
     flex-direction: row;
     border-right: none;
     border-bottom: 1px dashed $gray-2;
+    padding: $step-1;
 
     &:last-child {
       border-bottom: none;
@@ -103,5 +104,6 @@
 
   .time {
     width: 150px;
+    height: 60px;
   }
 }
