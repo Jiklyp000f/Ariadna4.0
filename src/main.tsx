@@ -1,4 +1,3 @@
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles/fonts.css";
 import "antd/dist/reset.css";
@@ -22,8 +21,7 @@ import { themeConfig } from "./shared/config";
  * - Про историю заказов это они серьезно?
  * - Какой логотип?
  * - Шрифты какие?
- * - Переделать шапку на мобилку
- * - Проверить адаптивку
+ * - Добавить ErrorBoundary
  */
 
 /*****************************************************/
@@ -31,9 +29,7 @@ import { themeConfig } from "./shared/config";
 const router = createBrowserRouter(routes);
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <ConfigProvider theme={themeConfig}>
-      <RouterProvider router={router} />
-    </ConfigProvider>
-  </StrictMode>,
+  <ConfigProvider theme={themeConfig}>
+    <RouterProvider router={router} />
+  </ConfigProvider>,
 );
