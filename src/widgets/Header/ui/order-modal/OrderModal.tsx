@@ -5,22 +5,20 @@ import { AppButtonPrimary } from "@/shared/ui/button";
 
 interface Props {
   open: boolean;
-  onClose: () => void; // меняем название с showModal на onClose
+  showModal: (open: boolean) => void;
 }
 
-export const OrderModal: React.FC<Props> = ({ open, onClose }) => {
+export const OrderModal: React.FC<Props> = ({ open, showModal }) => {
   const orders = useOrderStore((state) => state.orders);
   const clearOrder = useOrderStore((state) => state.clearOrder);
 
   const handleClose = () => {
-    console.log("Closing modal");
-    onClose();
+    showModal(false);
   };
 
   const handleOrderSubmit = () => {
-    console.log("Order submitted");
     clearOrder();
-    onClose();
+    showModal(false);
   };
 
   return (
@@ -41,8 +39,8 @@ export const OrderModal: React.FC<Props> = ({ open, onClose }) => {
         {orders.length > 0 ? (
           <div className={styles.content}>
             <ul className={styles.list}>
-              {orders?.map((item) => (
-                <li className={styles.item} key={item.id}>
+              {orders?.map((item, index) => (
+                <li className={styles.item} key={index}>
                   <span className={styles.itemName}>{item.title}</span>
                   <span className={styles.itemPrice}>{item.price} ₽</span>
                 </li>

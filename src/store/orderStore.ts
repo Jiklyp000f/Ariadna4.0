@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { notification } from "antd";
+import { message, notification } from "antd";
 
 export type Order = {
   id: number;
@@ -39,10 +39,8 @@ export const useOrderStore = create<State & Actions>()(
 
         set((state) => ({ orders: [...state.orders, order] }));
 
-        notification.success({
-          message: "Товар добавлен",
-          description: `${order.title} успешно добавлен в корзину`,
-          placement: "bottomRight",
+        message.success({
+          content: `${order.title} успешно добавлен в корзину`,
           duration: 1,
         });
       },
@@ -60,6 +58,10 @@ export const useOrderStore = create<State & Actions>()(
       },
       clearOrder: () => {
         set({ orders: [] });
+        message.success({
+          content: `Заказ оформлен!`,
+          duration: 1,
+        });
       },
     }),
     {

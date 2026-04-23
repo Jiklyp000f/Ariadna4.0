@@ -7,12 +7,14 @@ import { useScreenSize } from "@/shared/lib/useScreenSize";
 import { AuthModal } from "@/features/auth";
 import { Cart } from "./ui/cart";
 import style from "./styles.module.scss";
+import { OrderModal } from "./ui/order-modal";
 
 export const Header = () => {
   const navigate = useNavigate();
   const { isMobile } = useScreenSize();
   const [open, setOpen] = useState(false);
-  const [isOpen, changeModal] = useState(false);
+  const [isOpenAuth, changeAuthModal] = useState(false);
+  const [isOpenOrder, changeOrderModal] = useState(false);
 
   if (isMobile) {
     return (
@@ -65,15 +67,16 @@ export const Header = () => {
         }}
       />
       <div className={style.actions}>
-        <Cart />
+        <Cart onClick={() => changeOrderModal(true)} />
         <Login
           onClick={() => {
-            changeModal(true);
+            changeAuthModal(true);
           }}
         />
       </div>
 
-      <AuthModal open={isOpen} showModal={changeModal} />
+      <AuthModal open={isOpenAuth} showModal={changeAuthModal} />
+      <OrderModal open={isOpenOrder} showModal={changeOrderModal} />
     </div>
   );
 };
