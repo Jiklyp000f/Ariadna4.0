@@ -29,9 +29,8 @@
 .subtitle {
   color: $dark-3;
   font-weight: 300;
-  border-top: $step-1 - 1 dotted $light-blue;
-  border-bottom: $step-1 - 1 dotted $light-blue;
-  padding: $step-2 0;
+  border-top: 1px dashed $gray-1;
+  padding: $step-3 0;
   line-height: 1.4;
   font-size: $font-size-lg;
   margin-top: $step-3;

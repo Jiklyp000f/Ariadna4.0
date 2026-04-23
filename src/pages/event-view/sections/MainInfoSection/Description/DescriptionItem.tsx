@@ -1,4 +1,4 @@
-import { WarningOutlined } from "@ant-design/icons";
+import { WarningFilled } from "@ant-design/icons";
 import style from "./styles.module.scss";
 
 interface DescriptionProps {
@@ -22,7 +22,7 @@ export const DescriptionItem: React.FC<DescriptionProps> = ({
         {units && <span className={style.units}>{units}</span>}
         {type && (
           <div className={style.typeWrapper}>
-            <WarningOutlined />
+            <WarningFilled />
             <span className={style.type}>{type}</span>
           </div>
         )}
