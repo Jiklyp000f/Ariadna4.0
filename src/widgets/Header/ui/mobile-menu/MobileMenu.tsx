@@ -1,8 +1,8 @@
 import { CloseOutlined } from "@ant-design/icons";
-import { Navigation } from "@/components/Navigation";
 import { useNavigate } from "react-router-dom";
 import { Login } from "../login";
 import style from "./../../styles.module.scss";
+import { Navigation } from "../navigation";
 
 type Props = {
   open: boolean;

@@ -2,7 +2,7 @@ import { useOrderStore } from "@/store/orderStore";
 import { Modal } from "antd";
 import styles from "./styles.module.scss";
 import { AppButtonPrimary } from "@/shared/ui/button";
-import { Title } from "@/shared/ui/Titles";
+import { Title } from "@/shared/ui/titles";
 
 interface Props {
   open: boolean;

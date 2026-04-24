@@ -1,7 +1,7 @@
 import style from "./styles.module.scss";
 import maxIcon from "@/assets/image/icons/max_icon.svg";
 import vkIcon from "@/assets/image/icons/vk_icon.svg";
-import { Title } from "@/shared/ui/Titles";
+import { Title } from "@/shared/ui/titles";
 import {
   HomeOutlined,
   MailOutlined,

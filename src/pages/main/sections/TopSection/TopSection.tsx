@@ -1,6 +1,6 @@
 import img from "@/assets/image/topSection/orig.webp";
 import { useScreenSize } from "@/shared/lib/useScreenSize";
-import { Title } from "@/shared/ui/Titles";
+import { Title } from "@/shared/ui/titles";
 import style from "./styles.module.scss";
 
 export const TopSection = () => {

@@ -1,4 +1,4 @@
-import { NavigationItem } from "./NavigationItem";
+import { NavigationItem } from "./navigation-item";
 import style from "./styles.module.scss";
 
 const menuItems = [

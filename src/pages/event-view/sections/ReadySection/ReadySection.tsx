@@ -1,7 +1,7 @@
 import style from "./styles.module.scss";
 import telephone from "@/assets/image/telephone.png";
 import weather from "@/assets/image/weather.png";
-import { Title } from "@/shared/ui/Titles";
+import { Title } from "@/shared/ui/titles";
 
 export const ReadySection = () => {
   return (

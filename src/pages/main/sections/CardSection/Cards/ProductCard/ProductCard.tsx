@@ -1,4 +1,4 @@
-import { Title } from "@/shared/ui/Titles";
+import { Title } from "@/shared/ui/titles";
 import style from "./styles.module.scss";
 import { useNavigate } from "react-router-dom";
 import { AppButtonPrimary } from "@/shared/ui/button";

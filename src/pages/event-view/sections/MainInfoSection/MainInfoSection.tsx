@@ -1,6 +1,6 @@
 import style from "./styles.module.scss";
 import batyshka from "@/assets/image/batyshka.png";
-import { Title } from "@/shared/ui/Titles";
+import { Title } from "@/shared/ui/titles";
 import { Description } from "./Description";
 import { DescriptionItem } from "./Description/DescriptionItem";
 import { Rate } from "antd";

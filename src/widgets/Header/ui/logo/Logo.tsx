@@ -1,5 +1,5 @@
 // import logoImage from "@/assets/image/logo.svg";
-// import style from "./Logo.module.css";
+// import style from "./styles.module.css";
 
 type Props = {
   onClick?: () => void;

@@ -1,7 +1,6 @@
 import { eventsArray } from "./data";
-import { ProductCard } from "@/components/Cards";
-
 import type { Event } from "./types";
+import { ProductCard } from "./Cards/ProductCard";
 
 import style from "./styles.module.scss";
 

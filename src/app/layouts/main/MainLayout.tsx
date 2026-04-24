@@ -1,5 +1,5 @@
-import { Header } from "@/widgets/Header/Header";
-import { Footer } from "@/widgets/Footer";
+import { Header } from "@/widgets/header/Header";
+import { Footer } from "@/widgets/footer";
 import { Fragment } from "react/jsx-runtime";
 import { MainLayoutWrapper } from "./MainLayoutWrapper";
 import { ScrollToTop } from "../ScrollToTop";

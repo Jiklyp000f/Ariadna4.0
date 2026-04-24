@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import { Title } from "@/shared/ui/Titles";
+import { Title } from "@/shared/ui/titles";
 import { slidesData } from "./data";
 
 import style from "./styles.module.scss";

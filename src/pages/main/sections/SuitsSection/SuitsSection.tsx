@@ -4,7 +4,7 @@ import img2 from "@/assets/image/suitsImg/image2.png";
 import img3 from "@/assets/image/suitsImg/image3.png";
 import img4 from "@/assets/image/suitsImg/image4.png";
 import img5 from "@/assets/image/suitsImg/image5.png";
-import { Title } from "@/shared/ui/Titles";
+import { Title } from "@/shared/ui/titles";
 
 export const SuitsSection = () => {
   return (
