@@ -3,11 +3,11 @@
   align-items: center;
   gap: $step-3;
   color: $dark-5;
-  border-radius: $step-1;
-  padding: $step-2 $step-3;
+  border-radius: $step-2;
+  padding: $step-1 $step-3;
   cursor: pointer;
 
   &:hover {
-    background: $white;
+    background: $gray-5;
   }
 }

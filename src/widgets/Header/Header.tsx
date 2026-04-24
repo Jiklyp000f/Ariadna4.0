@@ -4,12 +4,12 @@ import { useScreenSize } from "@/shared/lib/useScreenSize";
 import { AuthModal } from "@/features/auth";
 import { Cart } from "./ui/cart";
 import { OrderModal } from "./ui/order-modal";
-import style from "./styles.module.scss";
 import { MenuOutlined } from "@ant-design/icons";
 import { Logo } from "./ui/logo";
 import { Navigation } from "./ui/navigation";
 import { Login } from "./ui/login";
 import { MobileMenu } from "./ui/mobile-menu";
+import style from "./styles.module.scss";
 
 export const Header = () => {
   const navigate = useNavigate();

@@ -17,7 +17,7 @@
     font-size: 14px;
     font-weight: 200;
     display: flex;
-    gap: $step-2;
+    gap: $step-3;
   }
 
   a {
@@ -72,7 +72,6 @@
   }
 }
 
-.max,
 .vk {
   height: 50px;
 }
@@ -84,7 +83,7 @@
 .help {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: $step-2;
 }
 
 .helpLinks {
@@ -145,6 +144,10 @@ p.copy {
     display: flex;
     justify-content: space-between;
     padding: 0 5px;
+
+    h4 {
+      font-size: $font-size-lg;
+    }
   }
 
   .footer > div {
@@ -155,5 +158,17 @@ p.copy {
     display: flex;
     justify-content: center;
     position: static;
+  }
+
+  .social {
+    gap: $step-3;
+  }
+
+  .vk {
+    height: 38px;
+  }
+
+  .max {
+    height: 26px;
   }
 }
