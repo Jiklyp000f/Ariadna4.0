@@ -1,5 +1,4 @@
 import { createRoot } from "react-dom/client";
-import "./styles/fonts.css";
 import "antd/dist/reset.css";
 import "./main.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
