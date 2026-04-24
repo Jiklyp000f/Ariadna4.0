@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { routes } from "./app/routes";
 import { ConfigProvider } from "antd";
 import { themeConfig } from "./shared/config";
+import { ErrorBoundaryProvider } from "./app/providers/ErrorBoundaryProvider";
 
 //TODO: модалка, поменять телегу на макс, шрифты, аннотация(небольшое описание карточек товара),
 //  поменять лого, навигация увеличить шрифт, уменьшить шрифт перед футером,
@@ -28,7 +29,10 @@ import { themeConfig } from "./shared/config";
 const router = createBrowserRouter(routes);
 
 createRoot(document.getElementById("root")!).render(
-  <ConfigProvider theme={themeConfig}>
-    <RouterProvider router={router} />
-  </ConfigProvider>,
+  <ErrorBoundaryProvider>
+    <ConfigProvider theme={themeConfig}>
+      <RouterProvider router={router} />
+    </ConfigProvider>
+    ,
+  </ErrorBoundaryProvider>,
 );

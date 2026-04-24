@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { LazyLoad } from "./lazy-load";
+import { ErrorBoundaryProvider } from "../providers/ErrorBoundaryProvider";
 
 const MainPage = lazy(() =>
   import("@/pages/main/MainPage").then((module) => ({
@@ -24,7 +25,9 @@ const withLazyLoad = (
   Component: React.LazyExoticComponent<React.ComponentType>,
 ) => (
   <LazyLoad>
-    <Component />
+    <ErrorBoundaryProvider>
+      <Component />
+    </ErrorBoundaryProvider>
   </LazyLoad>
 );
 

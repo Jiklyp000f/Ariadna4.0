@@ -1,0 +1,111 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: $step-5;
+  background: $white;
+}
+
+.icon {
+  font-size: 80px;
+  margin-bottom: $step-4;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.code {
+  font-size: 120px;
+  font-weight: bold;
+  margin: 0;
+  color: $coral;
+  letter-spacing: 4px;
+}
+
+.title {
+  font-size: $font-size-xxxl;
+  margin: $step-3 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: $dark-3;
+}
+
+.message {
+  font-size: 18px;
+  max-width: 500px;
+  min-width: 500px;
+  margin: $step-4 0 $step-8;
+  color: $gray-1;
+  line-height: 1.5;
+  background: $gray-4;
+  padding: $step-4;
+  border-radius: 12px;
+}
+
+.buttons {
+  display: flex;
+  gap: $step-4;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.retryButton {
+  background: white;
+  color: $primary;
+  border: 2px solid $primary;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+
+  &:hover {
+    background: $primary;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .code {
+    font-size: 60px;
+  }
+
+  .icon {
+    font-size: 50px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .message {
+    font-size: 14px;
+    padding: $step-3;
+    margin: $step-4 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: $step-3;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .retryButton {
+    width: 100%;
+  }
+}
