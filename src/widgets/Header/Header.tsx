@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useScreenSize } from "@/shared/lib/useScreenSize";
-import { AuthModal } from "@/features/auth";
 import { Cart } from "./ui/cart";
 import { OrderModal } from "./ui/order-modal";
 import { MenuOutlined } from "@ant-design/icons";
@@ -10,12 +9,12 @@ import { Navigation } from "./ui/navigation";
 import { Login } from "./ui/login";
 import { MobileMenu } from "./ui/mobile-menu";
 import style from "./styles.module.scss";
+import { changeAuthModal } from "@/store/authStore";
 
 export const Header = () => {
   const navigate = useNavigate();
   const { isMobile } = useScreenSize();
   const [open, setOpen] = useState(false);
-  const [isOpenAuth, changeAuthModal] = useState(false);
   const [isOpenOrder, changeOrderModal] = useState(false);
 
   if (isMobile) {
@@ -32,13 +31,7 @@ export const Header = () => {
           </div>
         </div>
 
-        <MobileMenu
-          open={open}
-          setOpen={setOpen}
-          changeAuthModal={changeAuthModal}
-        />
-
-        <AuthModal open={isOpenAuth} showModal={changeAuthModal} />
+        <MobileMenu open={open} setOpen={setOpen} />
         <OrderModal open={isOpenOrder} showModal={changeOrderModal} />
       </>
     );
@@ -54,14 +47,9 @@ export const Header = () => {
       />
       <div className={style.actions}>
         <Cart onClick={() => changeOrderModal(true)} />
-        <Login
-          onClick={() => {
-            changeAuthModal(true);
-          }}
-        />
+        <Login onClick={() => changeAuthModal(true)} />
       </div>
 
-      <AuthModal open={isOpenAuth} showModal={changeAuthModal} />
       <OrderModal open={isOpenOrder} showModal={changeOrderModal} />
     </div>
   );

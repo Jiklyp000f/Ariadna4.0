@@ -18,10 +18,9 @@ import { ErrorBoundaryProvider } from "./app/providers/ErrorBoundaryProvider";
 
 // NOTE: JOKERs
 /**
- * - Про историю заказов это они серьезно?
  * - Какой логотип?
- * - Шрифты какие?
- * - Добавить ErrorBoundary
+ * - Пофиксить адаптивку карточек товара
+ * - Добавить ErrorBoundary в роуты
  */
 
 /*****************************************************/
@@ -33,6 +32,5 @@ createRoot(document.getElementById("root")!).render(
     <ConfigProvider theme={themeConfig}>
       <RouterProvider router={router} />
     </ConfigProvider>
-    ,
   </ErrorBoundaryProvider>,
 );

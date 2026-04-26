@@ -15,11 +15,6 @@ const EventPage = lazy(() =>
 const Page404 = lazy(() =>
   import("@/pages/404/Page404").then((module) => ({ default: module.Page404 })),
 );
-const AuthPage = lazy(() =>
-  import("@/pages/auth/AuthPage").then((module) => ({
-    default: module.AuthPage,
-  })),
-);
 
 const withLazyLoad = (
   Component: React.LazyExoticComponent<React.ComponentType>,
@@ -43,9 +38,5 @@ export const routes = [
   {
     path: "/404",
     element: withLazyLoad(Page404),
-  },
-  {
-    path: "/auth",
-    element: withLazyLoad(AuthPage),
   },
 ];

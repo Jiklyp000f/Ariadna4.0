@@ -5,9 +5,12 @@ import { AppButtonPrimary } from "@/shared/ui/button";
 import { FieldTimeOutlined } from "@ant-design/icons";
 import type { Event } from "@/pages/main/sections/CardSection/types";
 import { Rate } from "antd";
+import { changeAuthModal, useAuthStore } from "@/store/authStore";
 
 export const ProductCard: React.FC<Event> = (props) => {
   const { img, title, time, price, disabled, href } = props;
+
+  const isAuth = useAuthStore((state) => state.isAuth);
 
   const navigate = useNavigate();
   return (
@@ -37,7 +40,7 @@ export const ProductCard: React.FC<Event> = (props) => {
         <AppButtonPrimary
           wide
           disabled={disabled}
-          onClick={() => navigate(href)}
+          onClick={isAuth ? () => navigate(href) : () => changeAuthModal(true)}
         >
           {disabled ? "В разработке" : "Сыграть"}
         </AppButtonPrimary>

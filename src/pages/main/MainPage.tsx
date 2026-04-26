@@ -1,5 +1,5 @@
 import { ContentLayout, MainLayout } from "@/app/layouts";
-import { Section } from "@/widgets/Section";
+import { Section } from "@/widgets/section";
 import {
   CardSection,
   OfferSection,

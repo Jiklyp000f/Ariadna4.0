@@ -3,18 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { Login } from "../login";
 import style from "./../../styles.module.scss";
 import { Navigation } from "../navigation";
+import { changeAuthModal } from "@/store/authStore";
 
 type Props = {
   open: boolean;
   setOpen: (open: boolean) => void;
-  changeAuthModal: (open: boolean) => void;
 };
 
-export const MobileMenu: React.FC<Props> = ({
-  open,
-  setOpen,
-  changeAuthModal,
-}) => {
+export const MobileMenu: React.FC<Props> = ({ open, setOpen }) => {
   const navigate = useNavigate();
 
   if (!open) return null;
