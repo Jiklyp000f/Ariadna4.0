@@ -20,10 +20,7 @@ import { ErrorBoundaryProvider } from "./app/providers/ErrorBoundaryProvider";
 /**
  * - Пофиксить адаптивку карточек товара
  * - Добавить ErrorBoundary в роуты
- * - Добавить оставшиеся страницы
- * - Добавить логотип
- */
-
+ *
 /*****************************************************/
 
 const router = createBrowserRouter(routes);

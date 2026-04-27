@@ -16,6 +16,18 @@ const Page404 = lazy(() =>
   import("@/pages/404/Page404").then((module) => ({ default: module.Page404 })),
 );
 
+const AboutPage = lazy(() =>
+  import("@/pages/about/AboutPage").then((module) => ({
+    default: module.AboutPage,
+  })),
+);
+
+const FAQPage = lazy(() =>
+  import("@/pages/faq/FaqPage").then((module) => ({
+    default: module.FaqPage,
+  })),
+);
+
 const withLazyLoad = (
   Component: React.LazyExoticComponent<React.ComponentType>,
 ) => (
@@ -38,5 +50,13 @@ export const routes = [
   {
     path: "/404",
     element: withLazyLoad(Page404),
+  },
+  {
+    path: "/about",
+    element: withLazyLoad(AboutPage),
+  },
+  {
+    path: "/faq",
+    element: withLazyLoad(FAQPage),
   },
 ];

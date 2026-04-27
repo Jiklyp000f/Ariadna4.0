@@ -1,3 +1,9 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .mainLayout {
   max-width: 1230px;
   display: flex;
@@ -9,6 +15,6 @@
 
 @media (max-width: 768px) {
   .mainLayout {
-    padding: $step-9 0 $step-3 0;
+    padding: 50px 0 $step-3 0;
   }
 }

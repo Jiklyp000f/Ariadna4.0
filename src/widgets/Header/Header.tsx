@@ -40,11 +40,7 @@ export const Header = () => {
   return (
     <div className={style.header}>
       <Logo onClick={() => navigate("/")} />
-      <Navigation
-        onClick={() => {
-          navigate("/404");
-        }}
-      />
+      <Navigation />
       <div className={style.actions}>
         <Cart onClick={() => changeOrderModal(true)} />
         <Login onClick={() => changeAuthModal(true)} />

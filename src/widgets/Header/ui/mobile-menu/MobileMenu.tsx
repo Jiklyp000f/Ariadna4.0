@@ -1,5 +1,4 @@
 import { CloseOutlined } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
 import { Login } from "../login";
 import style from "./../../styles.module.scss";
 import { Navigation } from "../navigation";
@@ -11,8 +10,6 @@ type Props = {
 };
 
 export const MobileMenu: React.FC<Props> = ({ open, setOpen }) => {
-  const navigate = useNavigate();
-
   if (!open) return null;
   return (
     <div className={style.overlay} onClick={() => setOpen(false)}>
@@ -21,12 +18,7 @@ export const MobileMenu: React.FC<Props> = ({ open, setOpen }) => {
           <CloseOutlined onClick={() => setOpen(false)} />
         </div>
 
-        <Navigation
-          onClick={() => {
-            navigate("/404");
-            setOpen(false);
-          }}
-        />
+        <Navigation />
         <div className={style.mobileLogin}>
           <Login
             onClick={() => {
