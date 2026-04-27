@@ -1,4 +1,11 @@
 .logo {
-    height: 80px;
-    flex-shrink: 0;
+  height: 40px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 26px;
+  }
 }

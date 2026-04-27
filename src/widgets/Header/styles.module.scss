@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $step-4 $step-5;
+  padding: $step-4 $step-8;
   gap: 1rem;
   flex-wrap: wrap;
 }
@@ -49,7 +49,7 @@
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
-    padding: 1rem;
+    padding: $step-3;
     gap: 1rem;
   }
 }

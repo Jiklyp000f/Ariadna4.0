@@ -21,7 +21,7 @@ export const Header = () => {
     return (
       <>
         <div className={style.menu}>
-          <span>Logo</span>
+          <Logo onClick={() => navigate("/")} />
           <div className={style.actions}>
             <Cart onClick={() => changeOrderModal(true)} />
             <MenuOutlined
