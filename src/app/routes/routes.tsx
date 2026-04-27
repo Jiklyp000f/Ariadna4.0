@@ -48,15 +48,15 @@ export const routes = [
     element: withLazyLoad(EventPage),
   },
   {
-    path: "/404",
-    element: withLazyLoad(Page404),
-  },
-  {
     path: "/about",
     element: withLazyLoad(AboutPage),
   },
   {
     path: "/faq",
     element: withLazyLoad(FAQPage),
+  },
+  {
+    path: "*",
+    element: withLazyLoad(Page404),
   },
 ];

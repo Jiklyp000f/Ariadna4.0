@@ -18,7 +18,6 @@ import { ErrorBoundaryProvider } from "./app/providers/ErrorBoundaryProvider";
 
 // NOTE: JOKERs
 /**
- * - Пофиксить адаптивку карточек товара
  * - Добавить ErrorBoundary в роуты
  *
 /*****************************************************/

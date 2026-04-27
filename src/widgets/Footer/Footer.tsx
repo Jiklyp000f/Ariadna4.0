@@ -8,8 +8,10 @@ import {
   PhoneOutlined,
   UserOutlined,
 } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className={style.footer}>
       <div className={style.contacts}>
@@ -38,10 +40,38 @@ export const Footer = () => {
       <div className={style.help}>
         <Title variant="4">Помощь</Title>
         <div className={style.helpLinks}>
-          <a href="/404">Скидки</a>
-          <a href="/404">Форматы квестов</a>
-          <a href="/404">Правила пользования</a>
-          <a href="/404">Термины</a>
+          <a
+            href="#"
+            onClick={() => {
+              navigate("404");
+            }}
+          >
+            Скидки
+          </a>
+          <a
+            href="#"
+            onClick={() => {
+              navigate("404");
+            }}
+          >
+            Форматы квестов
+          </a>
+          <a
+            href="#"
+            onClick={() => {
+              navigate("404");
+            }}
+          >
+            Правила пользования
+          </a>
+          <a
+            href="#"
+            onClick={() => {
+              navigate("404");
+            }}
+          >
+            Термины
+          </a>
         </div>
       </div>
 
